@@ -5,18 +5,18 @@
     <div class="page-header">
       <h3 class="page-title">
         <span class="page-title-icon bg-gradient-primary text-white mr-2">
-          <i class="mdi mdi-home"></i>                 
+          <i class="mdi mdi-bullhorn"></i>                
         </span>
         Kampanye
       </h3>
-      <nav aria-label="breadcrumb">
+      <!-- <nav aria-label="breadcrumb">
         <ul class="breadcrumb">
           <li class="breadcrumb-item active" aria-current="page">
             <span></span>Overview
             <i class="mdi mdi-alert-circle-outline icon-sm text-primary align-middle"></i>
           </li>
         </ul>
-      </nav>
+      </nav> -->
     </div>
     <div class="row">
     </div>
@@ -25,98 +25,49 @@
         <div class="card">
           <div class="card-body">
             <h4 class="card-title">Recent Tickets</h4>
+            <h5>Latest Retrieve:</h5>
             <div class="table-responsive">
-              <table class="table">
+              <table class="table text-center">
                 <thead>
                   <tr>
                     <th>
-                      Assignee
+                      No.
                     </th>
                     <th>
-                      Subject
+                      Nama Kampanye
                     </th>
                     <th>
-                      Status
+                      Jumlah Video
                     </th>
                     <th>
-                      Last Update
+                      Tampilkan Detail
                     </th>
                     <th>
-                      Tracking ID
+                      Action
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>
-                      <img src="{{ url_for('static', filename='images/faces/face1.jpg') }}" class="mr-2" alt="image">
-                      David Grey
+                      1
                     </td>
                     <td>
-                      Fund is not recieved
+                      Emina Bright Stuff
                     </td>
                     <td>
-                      <label class="badge badge-gradient-success">DONE</label>
+                      10
                     </td>
                     <td>
-                      Dec 5, 2017
+                      <button type="button" class="btn btn-sm btn-gradient-primary btn-rounded justify-content-center ">Detail</button>
                     </td>
                     <td>
-                      WD-12345
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <img src="{{ url_for('static', filename='images/faces/face2.jpg') }}" class="mr-2" alt="image">
-                      Stella Johnson
-                    </td>
-                    <td>
-                      High loading time
-                    </td>
-                    <td>
-                      <label class="badge badge-gradient-warning">PROGRESS</label>
-                    </td>
-                    <td>
-                      Dec 12, 2017
-                    </td>
-                    <td>
-                      WD-12346
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <img src="{{ url_for('static', filename='images/faces/face3.jpg') }}" class="mr-2" alt="image">
-                      Marina Michel
-                    </td>
-                    <td>
-                      Website down for one week
-                    </td>
-                    <td>
-                      <label class="badge badge-gradient-info">ON HOLD</label>
-                    </td>
-                    <td>
-                      Dec 16, 2017
-                    </td>
-                    <td>
-                      WD-12347
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <img src="{{ url_for('static', filename='images/faces/face4.jpg') }}" class="mr-2" alt="image">
-                      John Doe
-                    </td>
-                    <td>
-                      Loosing control on server
-                    </td>
-                    <td>
-                      <label class="badge badge-gradient-danger">REJECTED</label>
-                    </td>
-                    <td>
-                      Dec 3, 2017
-                    </td>
-                    <td>
-                      WD-12348
+                      <button type="button" class="btn btn-sm btn-gradient-info" data-toggle="modal" data-target="#editModal">
+                        <i class="mdi mdi-pencil"></i>
+                      </button>
+                      <button type="button" class="btn btn-sm btn-gradient-danger" data-toggle="modal" data-target="#deleteModal">
+                        <i class="mdi mdi-delete"></i>
+                      </button>
                     </td>
                   </tr>
                 </tbody>
@@ -127,4 +78,6 @@
       </div>
     </div>
   </div>
+  {% include 'edit_modal.html' %}
+  {% include 'delete_modal.html' %}
 {% endblock %}
