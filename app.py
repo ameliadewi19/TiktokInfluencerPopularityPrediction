@@ -8,6 +8,7 @@ app = Flask(__name__)
 client = MongoClient('mongodb://localhost:27017/')  
 db = client['tiktok_analysis']  
 collection_influencer = db['user_api']  
+collection_video = db['video_api'] 
 
 def nocache(view):
     @wraps(view)
@@ -56,7 +57,26 @@ def influencer():
 @app.route("/kampanye")
 @nocache
 def kampanye():
-    return render_template("kampanye.html")
+    campaigns_data = collection_video.find()
+
+    # # Create a list to store campaign details with video count
+    # campaigns_data = []
+
+    # # Calculate the count for each campaign
+    # for campaign_data in campaigns_data:
+    #     campaign_name = campaign_data.get('namaCampaign', '')
+    #     video_count = len(campaign_data.get('video', []))
+    #     campaigns.append({
+    #         'namaCampaign': campaign_name,
+    #         'videoCount': video_count
+    #     })
+
+    return render_template("kampanye.html", campaigns=campaigns_data)
+
+@app.route("/detail_kampanye")
+@nocache
+def detail_kampanye():
+    return render_template("detail_kampanye.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
