@@ -7,7 +7,7 @@
         <span class="page-title-icon bg-gradient-primary text-white mr-2">
           <i class="mdi mdi-home"></i>                 
         </span>
-        Influencer
+          Emina Bright Stuff
       </h3>
       <nav aria-label="breadcrumb">
         <ul class="breadcrumb">
@@ -18,44 +18,46 @@
         </ul>
       </nav>
     </div>
-    <div class="input-group mb-4" style="width: 300px;">
-        <div class="input-group-prepend">
-          <span class="input-group-text bg-white text-primary" style="border-bottom-left-radius: 20px; border-top-left-radius: 20px;"><i class="mdi mdi-magnify"></i></span>
-        </div>
-        <input type="text" class="form-control" aria-label="" placeholder="Masukan username influencer" style="border-bottom-right-radius: 20px; border-top-right-radius: 20px;">
-      </div>
     <div class="row">
+      <div class="col-md-6 mb-3">
+        <div class="input-group" style="width: 300px;">
+          <div class="input-group-prepend">
+            <span class="input-group-text bg-white text-primary" style="border-bottom-left-radius: 20px; border-top-left-radius: 20px;">
+              <i class="mdi mdi-magnify"></i>
+            </span>
+          </div>
+          <input type="text" class="form-control" aria-label="" placeholder="Masukan URL video" style="border-bottom-right-radius: 20px; border-top-right-radius: 20px;">
+        </div>
+      </div>
+      <div class="col-md-6 mb-3 text-right">
+        <button type="button" class="btn btn-sm btn-gradient-success btn-rounded justify-content-center"  data-toggle="modal" data-target="#addPostModal">+ Add Post</button>
+      </div>
     </div>
     <div class="row">
       <div class="col-12 grid-margin">
         <div class="card">
           <div class="card-body">
-            <h4 class="card-title">Influencer</h4>
-            <h6 class="mb-4">Latest Retrieve: 19 Oktober 2023 <button type="button" class="btn btn-sm btn-gradient-info btn-rounded ml-4">Sync now</button></h6>
+            <!-- <h4 class="card-title">Emina Bright Stuff</h4> -->
             <div class="table-responsive">
               <table class="table">
                 <thead>
                   <tr>
                     <th>No.</th>
-                    <th>Profil</th>
-                    <th>User Name</th>
-                    <th>Followers</th>
+                    <th>URL Post</th>
+                    <th>Creator</th>
                     <th>Likes</th>
                     <th>Views</th>
                     <th>Comments</th>
                     <th>Shares</th>
                     <th>Engagement</th>
-                    <th>Prediksi</th>
+                    <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
                   {% for influencer in influencers %}
                   <tr>
                     <td>
-                        {{loop.index}}
-                    </td>
-                    <td>
-                      <img src="{{ url_for('static', filename='images/faces/face1.jpg') }}" class="mr-2" alt="image">
+                      {{ loop.index }}
                     </td>
                     <td>
                         {{ influencer.username }}
@@ -79,7 +81,12 @@
                         {{ influencer.statistic[-1].engagementRate | format_percentage }}
                     </td>
                     <td>
-                        <a href="{{ url_for('prediksi_influencer', influencer_id=influencer._id) }}" class="btn btn-sm btn-gradient-primary btn-rounded">Detail</a>
+                      <button type="button" class="btn btn-sm btn-gradient-info" data-toggle="modal" data-target="#editModal">
+                        <i class="mdi mdi-pencil"></i>
+                      </button>
+                      <button type="button" class="btn btn-sm btn-gradient-danger" data-toggle="modal" data-target="#deleteModal">
+                        <i class="mdi mdi-delete"></i>
+                      </button>
                     </td>
                   </tr>
                   {% endfor %}
@@ -92,4 +99,6 @@
       </div>
     </div>
   </div>
+
+  {% include 'add_post.html' %}
 {% endblock %}

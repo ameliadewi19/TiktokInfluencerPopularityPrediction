@@ -5,61 +5,61 @@
     <div class="page-header">
       <h3 class="page-title">
         <span class="page-title-icon bg-gradient-primary text-white mr-2">
-          <i class="mdi mdi-bullhorn"></i>                
+          <i class="mdi mdi-bullhorn"></i>                 
         </span>
         Kampanye
       </h3>
-      <!-- <nav aria-label="breadcrumb">
+      <nav aria-label="breadcrumb">
         <ul class="breadcrumb">
           <li class="breadcrumb-item active" aria-current="page">
             <span></span>Overview
             <i class="mdi mdi-alert-circle-outline icon-sm text-primary align-middle"></i>
           </li>
         </ul>
-      </nav> -->
+      </nav>
     </div>
+
     <div class="row">
+      <div class="col-md-6 mb-3">
+        <div class="input-group" style="width: 300px;">
+          <div class="input-group-prepend">
+            <span class="input-group-text bg-white text-primary" style="border-bottom-left-radius: 20px; border-top-left-radius: 20px;">
+              <i class="mdi mdi-magnify"></i>
+            </span>
+          </div>
+          <input type="text" class="form-control" aria-label="" placeholder="Masukan nama kampanye" style="border-bottom-right-radius: 20px; border-top-right-radius: 20px;">
+        </div>
+      </div>
+      <div class="col-md-6 mb-3 text-right">
+        <button type="button" class="btn btn-sm btn-gradient-success btn-rounded justify-content-center"  data-toggle="modal" data-target="#addCampaignModal">+ Add Campaign</button>
+      </div>
     </div>
+
     <div class="row">
       <div class="col-12 grid-margin">
         <div class="card">
           <div class="card-body">
-            <h4 class="card-title">Recent Tickets</h4>
-            <h5>Latest Retrieve:</h5>
+            <h4 class="card-title">Kampanye</h4>
+            <h6 class="mb-4">Latest Retrieve: 19 Oktober 2023 <button type="button" class="btn btn-sm btn-gradient-info btn-rounded ml-4">Sync now</button></h6>
             <div class="table-responsive">
               <table class="table text-center">
                 <thead>
                   <tr>
-                    <th>
-                      No.
-                    </th>
-                    <th>
-                      Nama Kampanye
-                    </th>
-                    <th>
-                      Jumlah Video
-                    </th>
-                    <th>
-                      Tampilkan Detail
-                    </th>
-                    <th>
-                      Action
-                    </th>
+                    <th>No.</th>
+                    <th>Nama Kampanye</th>
+                    <th>Jumlah Video</th>
+                    <th>Tampilkan Detail</th>
+                    <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
+                  {% for campaign in campaigns %}
                   <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ campaign.namaCampaign }}</td>
+                    <!-- <td>{{ campaign['videoCount'] }}</td> -->
                     <td>
-                      1
-                    </td>
-                    <td>
-                      Emina Bright Stuff
-                    </td>
-                    <td>
-                      10
-                    </td>
-                    <td>
-                      <button type="button" class="btn btn-sm btn-gradient-primary btn-rounded justify-content-center ">Detail</button>
+                      <a href="{{ url_for('detail_kampanye') }}" class="btn btn-sm btn-gradient-primary btn-rounded justify-content-center">Detail</a>
                     </td>
                     <td>
                       <button type="button" class="btn btn-sm btn-gradient-info" data-toggle="modal" data-target="#editModal">
@@ -70,6 +70,7 @@
                       </button>
                     </td>
                   </tr>
+                  {% endfor %}
                 </tbody>
               </table>
             </div>
@@ -78,6 +79,8 @@
       </div>
     </div>
   </div>
+
   {% include 'edit_modal.html' %}
   {% include 'delete_modal.html' %}
+  {% include 'add_campaign.html' %}
 {% endblock %}
