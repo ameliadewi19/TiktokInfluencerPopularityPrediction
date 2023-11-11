@@ -37,6 +37,7 @@
                 <thead>
                   <tr>
                     <th>No.</th>
+                    <th>Profil</th>
                     <th>User Name</th>
                     <th>Followers</th>
                     <th>Likes</th>
@@ -50,6 +51,9 @@
                 <tbody>
                   {% for influencer in influencers %}
                   <tr>
+                    <td>
+                        {{loop.index}}
+                    </td>
                     <td>
                       <img src="{{ url_for('static', filename='images/faces/face1.jpg') }}" class="mr-2" alt="image">
                     </td>
@@ -75,7 +79,7 @@
                         {{ influencer.statistic[-1].engagementRate | format_percentage }}
                     </td>
                     <td>
-                      <button type="button" class="btn btn-sm btn-gradient-primary btn-rounded">Detail</button>
+                        <a href="{{ url_for('prediksi_influencer', influencer_id=influencer._id) }}" class="btn btn-sm btn-gradient-primary btn-rounded">Detail</a>
                     </td>
                   </tr>
                   {% endfor %}
