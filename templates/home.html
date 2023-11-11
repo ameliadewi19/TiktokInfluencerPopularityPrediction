@@ -17,7 +17,7 @@
                         <img src="{{ url_for('static', filename=
         'images/dashboard/circle.svg') }}" class="card-img-absolute" alt="circle-image"/>     
                         <h4 class="font-weight-bold mb-3">Total Influencer</h4>
-                        <h1 class="card-text">950</h1>
+                        <h1 class="card-text">{{ total_influencer }}</h1>
                     </div>
                 </div>
             </div>
@@ -73,6 +73,7 @@
                                             </tr>
                                         </thead>
                                         <tbody class="text-center">
+                                            {% for influencer in influencers%}
                                             <tr>
                                                 <td>
                                                     <div class="container badge badge-gradient-danger">
@@ -83,96 +84,22 @@
                                                     <img src="{{ url_for('static', filename='images/faces/face1.jpg') }}" class="mr-2" alt="image">
                                                 </td>
                                                 <td class="text-left">
-                                                    David Grey
+                                                    {{ influencer.username }}
                                                 </td>
                                                 <td>
-                                                    240K
+                                                    {{ influencer.statistic[-1].followerCount | format_number }}
                                                 </td>
                                                 <td>
-                                                    3M
+                                                    {{ influencer.statistic[-1].heartCount | format_number }}
                                                 </td>
                                                 <td>
-                                                    5M
-                                                </td>
-                                                <td>
-                                                    <a href="{{ url_for('influencer') }}" class="btn btn-sm btn-gradient-primary btn-rounded">Detail</a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="container badge badge-gradient-success">
-                                                        3%
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <img src="{{ url_for('static', filename='images/faces/face2.jpg') }}" class="mr-2" alt="image">
-                                                </td>
-                                                <td class="text-left">
-                                                    Stella Johnson
-                                                </td>
-                                                <td>
-                                                    240K
-                                                </td>
-                                                <td>
-                                                    3M
-                                                </td>
-                                                <td>
-                                                    5M
+                                                    {{ influencer.statistic[-1].totalPlayCount | format_number }}
                                                 </td>
                                                 <td>
                                                     <a href="{{ url_for('influencer') }}" class="btn btn-sm btn-gradient-primary btn-rounded">Detail</a>
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="container badge badge-gradient-success">
-                                                        10%
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <img src="{{ url_for('static', filename='images/faces/face3.jpg') }}" class="mr-2" alt="image">
-                                                </td>
-                                                <td class="text-left">
-                                                    Marina Michel
-                                                </td>
-                                                <td>
-                                                    240K
-                                                </td>
-                                                <td>
-                                                    3M
-                                                </td>
-                                                <td>
-                                                    5M
-                                                </td>
-                                                <td>
-                                                    <a href="{{ url_for('influencer') }}" class="btn btn-sm btn-gradient-primary btn-rounded">Detail</a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="container badge badge-gradient-danger">
-                                                        -40%
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <img src="{{ url_for('static', filename='images/faces/face4.jpg') }}" class="mr-2" alt="image">
-                                                </td>
-                                                <td class="text-left">
-                                                    John Doe
-                                                </td>
-                                                <td>
-                                                    240K
-                                                </td>
-                                                <td>
-                                                    3M
-                                                </td>
-                                                <td>
-                                                    5M
-                                                </td>
-                                                <td>
-                                                    <a href="{{ url_for('influencer') }}" class="btn btn-sm btn-gradient-primary btn-rounded">Detail</a>
-                                                </td>
-                                            </tr>
+                                            {% endfor %}
                                         </tbody>
                                     </table>
                                 </div>
