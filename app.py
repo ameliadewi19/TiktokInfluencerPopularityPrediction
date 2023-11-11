@@ -8,6 +8,7 @@ app = Flask(__name__)
 client = MongoClient('mongodb://localhost:27017/')  
 db = client['tiktok_analysis']  
 collection_influencer = db['user_api']  
+collection_campaign = db['video_api']
 
 def nocache(view):
     @wraps(view)
@@ -46,8 +47,9 @@ def login():
 @nocache
 def home():
     total_influencer_data = collection_influencer.count_documents({})
+    total_campaign_data = collection_campaign.count_documents({})
     influencers_data = collection_influencer.find().sort("statistic.engagementRate", -1)
-    return render_template("home.html", total_influencer = total_influencer_data, influencers = influencers_data)
+    return render_template("home.html", total_influencer = total_influencer_data, influencers = influencers_data, total_campaign = total_campaign_data)
 
 @app.route("/influencer")
 @nocache
