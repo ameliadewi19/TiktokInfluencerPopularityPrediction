@@ -96,7 +96,7 @@
                                                     {{ influencer.statistic[-1].totalPlayCount | format_number }}
                                                 </td>
                                                 <td>
-                                                    <a class="btn btn-sm btn-gradient-primary btn-rounded">Detail</a>
+                                                    <a href="{{ url_for('prediksi_influencer', influencer_id=influencer._id) }}" class="btn btn-sm btn-gradient-primary btn-rounded">Detail</a>
                                                 </td>
                                             </tr>
                                             {% endfor %}
