@@ -27,7 +27,7 @@
                     <img src="{{ url_for('static', filename=
         'images/dashboard/circle.svg') }}" class="card-img-absolute" alt="circle-image"/>                  
                     <h4 class="font-weight-normal mb-3">Total Campaign</h4>
-                    <h1 class="card-text">3</h1>
+                    <h1 class="card-text">{{ total_campaign }}</h1>
                 </div>
                 </div>
             </div>
@@ -90,7 +90,7 @@
                                                     {{ influencer.statistic[-1].totalPlayCount | format_number }}
                                                 </td>
                                                 <td>
-                                                    <a href="{{ url_for('influencer') }}" class="btn btn-sm btn-gradient-primary btn-rounded">Detail</a>
+                                                    <a class="btn btn-sm btn-gradient-primary btn-rounded">Detail</a>
                                                 </td>
                                             </tr>
                                             {% endfor %}

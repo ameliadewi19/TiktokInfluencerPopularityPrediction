@@ -5,9 +5,9 @@
     <div class="page-header">
       <h3 class="page-title">
         <span class="page-title-icon bg-gradient-primary text-white mr-2">
-          <i class="mdi mdi-bullhorn"></i>                 
+          <i class="mdi mdi-home"></i>                 
         </span>
-        Kampanye
+          Emina Bright Stuff
       </h3>
       <nav aria-label="breadcrumb">
         <ul class="breadcrumb">
@@ -18,7 +18,6 @@
         </ul>
       </nav>
     </div>
-
     <div class="row">
       <div class="col-md-6 mb-3">
         <div class="input-group" style="width: 300px;">
@@ -27,39 +26,59 @@
               <i class="mdi mdi-magnify"></i>
             </span>
           </div>
-          <input type="text" class="form-control" aria-label="" placeholder="Masukan nama kampanye" style="border-bottom-right-radius: 20px; border-top-right-radius: 20px;">
+          <input type="text" class="form-control" aria-label="" placeholder="Masukan URL video" style="border-bottom-right-radius: 20px; border-top-right-radius: 20px;">
         </div>
       </div>
       <div class="col-md-6 mb-3 text-right">
-        <button type="button" class="btn btn-sm btn-gradient-success btn-rounded justify-content-center"  data-toggle="modal" data-target="#addCampaignModal">+ Add Campaign</button>
+        <button type="button" class="btn btn-sm btn-gradient-success btn-rounded justify-content-center"  data-toggle="modal" data-target="#addPostModal">+ Add Post</button>
       </div>
     </div>
-
     <div class="row">
       <div class="col-12 grid-margin">
         <div class="card">
           <div class="card-body">
-            <h4 class="card-title">Kampanye</h4>
-            <h6 class="mb-4">Latest Retrieve: 19 Oktober 2023 <button type="button" class="btn btn-sm btn-gradient-info btn-rounded ml-4">Sync now</button></h6>
+            <!-- <h4 class="card-title">Emina Bright Stuff</h4> -->
             <div class="table-responsive">
-              <table class="table text-center">
+              <table class="table">
                 <thead>
                   <tr>
                     <th>No.</th>
-                    <th>Nama Kampanye</th>
-                    <th>Jumlah Video</th>
-                    <th>Tampilkan Detail</th>
+                    <th>URL Post</th>
+                    <th>Creator</th>
+                    <th>Likes</th>
+                    <th>Views</th>
+                    <th>Comments</th>
+                    <th>Shares</th>
+                    <th>Engagement</th>
                     <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {% for campaign in campaigns %}
+                  {% for influencer in influencers %}
                   <tr>
-                    <td>{{ loop.index }}</td>
-                    <td>{{ campaign.namaCampaign }}</td>
-                    <!-- <td>{{ campaign['videoCount'] }}</td> -->
                     <td>
-                      <a href="{{ url_for('detail_kampanye') }}" class="btn btn-sm btn-gradient-primary btn-rounded justify-content-center">Detail</a>
+                      {{ loop.index }}
+                    </td>
+                    <td>
+                        {{ influencer.username }}
+                    </td>
+                    <td>
+                        {{ influencer.statistic[-1].followerCount | format_number }}
+                    </td>
+                    <td>
+                        {{ influencer.statistic[-1].heartCount | format_number }}
+                    </td>
+                    <td>
+                        {{ influencer.statistic[-1].totalPlayCount | format_number }}
+                    </td>
+                    <td>
+                        {{ influencer.statistic[-1].totalCommentCount | format_number }}
+                    </td>
+                    <td>
+                        {{ influencer.statistic[-1].totalShareCount | format_number }}
+                    </td>
+                    <td>
+                        {{ influencer.statistic[-1].engagementRate | format_percentage }}
                     </td>
                     <td>
                       <button type="button" class="btn btn-sm btn-gradient-info" data-toggle="modal" data-target="#editModal">
@@ -71,6 +90,7 @@
                     </td>
                   </tr>
                   {% endfor %}
+                  
                 </tbody>
               </table>
             </div>
@@ -80,7 +100,5 @@
     </div>
   </div>
 
-  {% include 'edit_modal.html' %}
-  {% include 'delete_modal.html' %}
-  {% include 'add_campaign.html' %}
+  {% include 'add_post.html' %}
 {% endblock %}
