@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Purple Admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='vendors/iconfonts/mdi/css/materialdesignicons.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='vendors/css/vendor.bundle.base.css') }}">
+  <!-- endinject -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.png') }}" />
+</head>
+<body>
+    {% if request.path == '/login' or request.path == '/' %}
+        {% block body_login %} {% endblock %}
+    {% else %}
+        <div class="container-scroller">
+            <!-- partial:partials/_navbar.html -->
+            {% include "includes/_navbar.html" %}
+            <!-- partial -->
+
+            <div class="container-fluid page-body-wrapper">
+                <!-- partial:partials/_sidebar.html -->
+                {% include "includes/_sidebar.html" %}
+                <!-- partial -->
+
+                <div class="main-panel">
+                    {% block body_main %} {% endblock %}
+
+                    <!-- content-wrapper ends -->
+                    <!-- partial:partials/_footer.html -->
+                    {% include "includes/_footer.html" %}
+                    <!-- partial -->
+                </div>
+                <!-- main-panel ends -->
+            </div>
+            <!-- page-body-wrapper ends -->
+        </div>
+    {% endif %}
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="{{ url_for('static', filename='vendors/js/vendor.bundle.base.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendors/js/vendor.bundle.addons.js') }}"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+  <script src="{{ url_for('static', filename='js/off-canvas.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/misc.js') }}"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+  <!-- End custom js for this page-->
+</body>
+
+</html>
