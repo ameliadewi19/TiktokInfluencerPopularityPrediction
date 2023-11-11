@@ -1,8 +1,13 @@
 from flask import Flask, render_template, request, make_response
+from pymongo import MongoClient
 from functools import wraps, update_wrapper
 from datetime import datetime
 
 app = Flask(__name__)
+
+client = MongoClient('mongodb://localhost:27017/')  
+db = client['tiktok_analysis']  
+collection_influencer = db['user_api']  
 
 def nocache(view):
     @wraps(view)
@@ -14,6 +19,22 @@ def nocache(view):
         response.headers['Expires'] = '-1'
         return response
     return update_wrapper(no_cache, view)
+
+def format_number(value):
+    if value >= 1_000_000:
+        return f"{value / 1_000_000:.2f}M"
+    elif value >= 1_000:
+        return f"{value / 1_000:.1f}K"
+    else:
+        return str(value)
+
+app.jinja_env.filters['format_number'] = format_number
+
+def format_percentage(value):
+    rounded_value = round(value, 2)
+    return '{:.2f}%'.format(rounded_value)
+
+app.jinja_env.filters['format_percentage'] = format_percentage
 
 @app.route("/")
 @app.route("/login")
@@ -29,7 +50,8 @@ def home():
 @app.route("/influencer")
 @nocache
 def influencer():
-    return render_template("influencer.html")
+    influencers_data = collection_influencer.find()
+    return render_template("influencer.html", influencers=influencers_data)
 
 @app.route("/kampanye")
 @nocache
