@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, make_response
+from bson import ObjectId
 from pymongo import MongoClient
 from functools import wraps, update_wrapper
 from datetime import datetime
@@ -52,6 +53,29 @@ def home():
 def influencer():
     influencers_data = collection_influencer.find()
     return render_template("influencer.html", influencers=influencers_data)
+
+@app.route("/prediksi-influencer")
+@nocache
+def prediksi_influencer():
+    influencer_id = request.args.get('influencer_id')
+
+    # Ubah influencer_id menjadi tipe ObjectId
+    try:
+        influencer_id = ObjectId(influencer_id)
+    except Exception as e:
+        # Handle kesalahan jika influencer_id tidak valid
+        print(f"Error converting influencer_id to ObjectId: {e}")
+        return render_template("error.html", message="Invalid influencer ID")
+
+    # Cari influencer berdasarkan ID
+    influencer_data = collection_influencer.find_one({"_id": influencer_id})
+
+    if influencer_data:
+        # Render template dengan data influencer yang ditemukan
+        return render_template("prediksi-influencer.html", influencer=influencer_data)
+    else:
+        # Handle kasus ketika influencer tidak ditemukan
+        return render_template("error.html", message="Influencer not found")
 
 @app.route("/kampanye")
 @nocache

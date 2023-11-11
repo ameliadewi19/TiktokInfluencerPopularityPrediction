@@ -7,7 +7,7 @@
         <span class="page-title-icon bg-gradient-primary text-white mr-2">
           <i class="mdi mdi-home"></i>                 
         </span>
-        Influencer
+        Influencer Engagement Prediction
       </h3>
       <nav aria-label="breadcrumb">
         <ul class="breadcrumb">
@@ -18,73 +18,114 @@
         </ul>
       </nav>
     </div>
-    <div class="input-group mb-4" style="width: 300px;">
-        <div class="input-group-prepend">
-          <span class="input-group-text bg-white text-primary" style="border-bottom-left-radius: 20px; border-top-left-radius: 20px;"><i class="mdi mdi-magnify"></i></span>
-        </div>
-        <input type="text" class="form-control" aria-label="" placeholder="Masukan username influencer" style="border-bottom-right-radius: 20px; border-top-right-radius: 20px;">
-      </div>
-    <div class="row">
-    </div>
     <div class="row">
       <div class="col-12 grid-margin">
         <div class="card">
           <div class="card-body">
-            <h4 class="card-title">Influencer</h4>
-            <div class="table-responsive">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th>No.</th>
-                    <th>User Name</th>
-                    <th>Followers</th>
-                    <th>Likes</th>
-                    <th>Views</th>
-                    <th>Comments</th>
-                    <th>Shares</th>
-                    <th>Engagement</th>
-                    <th>Prediksi</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {% for influencer in influencers %}
-                  <tr>
-                    <td>
-                      <img src="{{ url_for('static', filename='images/faces/face1.jpg') }}" class="mr-2" alt="image">
-                    </td>
-                    <td>
-                        {{ influencer.username }}
-                    </td>
-                    <td>
-                        {{ influencer.statistic[-1].followerCount | format_number }}
-                    </td>
-                    <td>
-                        {{ influencer.statistic[-1].heartCount | format_number }}
-                    </td>
-                    <td>
-                        {{ influencer.statistic[-1].totalPlayCount | format_number }}
-                    </td>
-                    <td>
-                        {{ influencer.statistic[-1].totalCommentCount | format_number }}
-                    </td>
-                    <td>
-                        {{ influencer.statistic[-1].totalShareCount | format_number }}
-                    </td>
-                    <td>
-                        {{ influencer.statistic[-1].engagementRate | format_percentage }}
-                    </td>
-                    <td>
-                      <button type="button" class="btn btn-sm btn-gradient-primary btn-rounded">Detail</button>
-                    </td>
-                  </tr>
-                  {% endfor %}
-                  
-                </tbody>
-              </table>
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="{{ url_for('static', filename='images/faces/face1.jpg') }}" class="rounded-circle mr-2" alt="image">
+                </div>
+                <div class="col-md-10">
+                    <h3>
+                        <span class="" style="font-weight: 800;">Nickname | </span>
+                        <span class="text-gray" style="font-weight: 200;">@{{influencer.username}}</span>
+                    </h3>
+
+                    <div class="row mt-4">
+                        <div class="col">
+                            <div class="d-flex align-items-center">
+                                <button type="button" class="btn btn-inverse-primary btn-rounded btn-icon mr-3">
+                                    <i class="mdi mdi-account"></i>
+                                </button>
+                                <div class="mt-2">
+                                    <h4 style="font-weight: bold;">Follower</h4>
+                                    <h5 class="text-gray">{{ influencer.statistic[-1].followerCount | format_number }}</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex align-items-center">
+                                <button type="button" class="btn btn-inverse-danger btn-rounded btn-icon mr-3">
+                                    <i class="mdi mdi-heart"></i>
+                                </button>
+                                <div class="mt-2">
+                                    <h4 style="font-weight: bold;">Likes</h4>
+                                    <h5 class="text-gray">{{ influencer.statistic[-1].heartCount | format_number }}</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex align-items-center">
+                                <button type="button" class="btn btn-inverse-success btn-rounded btn-icon mr-3">
+                                    <i class="mdi mdi-eye"></i>
+                                </button>
+                                <div class="mt-2">
+                                    <h4 style="font-weight: bold;">Views</h4>
+                                    <h5 class="text-gray">{{ influencer.statistic[-1].totalPlayCount | format_number }}</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col">
+                            <div class="d-flex align-items-center">
+                                <button type="button" class="btn btn-inverse-info btn-rounded btn-icon mr-3">
+                                    <i class="mdi mdi-comment"></i>
+                                </button>
+                                <div class="mt-2">
+                                    <h4 style="font-weight: bold;">Comments</h4>
+                                    <h5 class="text-gray">{{ influencer.statistic[-1].totalCommentCount | format_number }}</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex align-items-center">
+                                <button type="button" class="btn btn-inverse-dark btn-rounded btn-icon mr-3">
+                                    <i class="mdi mdi-share"></i>
+                                </button>
+                                <div class="mt-2">
+                                    <h4 style="font-weight: bold;">Shares</h4>
+                                    <h5 class="text-gray">{{ influencer.statistic[-1].totalShareCount | format_number }}</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex align-items-center">
+                                <button type="button" class="btn btn-inverse-warning btn-rounded btn-icon mr-3">
+                                    <i class="mdi mdi-chart-line"></i>
+                                </button>
+                                <div class="mt-2">
+                                    <h4 style="font-weight: bold;">Engagement</h4>
+                                    <h5 class="text-gray">{{ influencer.statistic[-1].totalPlayCount | format_number }}</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+
+    <div class="row">
+        <div class="col-12 grid-margin">
+          <div class="card">
+            <div class="card-body">
+                <div class="col-lg-6 grid-margin stretch-card">
+                    <div class="card">
+                      <div class="card-body">
+                        <h4 class="card-title">Line chart</h4>
+                        <canvas id="lineChart" style="height:250px"></canvas>
+                      </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 {% endblock %}
