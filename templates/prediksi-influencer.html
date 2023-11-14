@@ -4,9 +4,10 @@
   <div class="content-wrapper">
     <div class="page-header">
       <h3 class="page-title">
-        <span class="page-title-icon bg-gradient-primary text-white mr-2">
-          <i class="mdi mdi-home"></i>                 
-        </span>
+        <a href="/influencer" class="page-title-icon bg-gradient-primary text-white mr-2">
+            <i class="mdi mdi-arrow-left-bold"></i>
+        </a>
+        
         Influencer Engagement Prediction
       </h3>
       <nav aria-label="breadcrumb">
@@ -28,7 +29,7 @@
                 </div>
                 <div class="col-md-10">
                     <h3>
-                        <span class="" style="font-weight: 800;">Nickname | </span>
+                        <span class="" style="font-weight: 800;">{{influencer.nickname}} | </span>
                         <span class="text-gray" style="font-weight: 200;">@{{influencer.username}}</span>
                     </h3>
 
@@ -115,14 +116,8 @@
         <div class="col-12 grid-margin">
           <div class="card">
             <div class="card-body">
-                <div class="col-lg-6 grid-margin stretch-card">
-                    <div class="card">
-                      <div class="card-body">
-                        <h4 class="card-title">Line chart</h4>
-                        <canvas id="lineChart" style="height:250px"></canvas>
-                      </div>
-                    </div>
-                </div>
+                <h4 class="card-title">Line chart</h4>
+                <canvas id="lineChart" style="height:250px"></canvas>
             </div>
           </div>
         </div>

@@ -48,8 +48,9 @@ def login():
 @nocache
 def home():
     total_influencer_data = collection_influencer.count_documents({})
-    influencers_data = collection_influencer.find().sort("statistic.engagementRate", -1)
-    return render_template("home.html", total_influencer = total_influencer_data, influencers = influencers_data)
+    total_campaign_data = collection_video.count_documents({})
+    influencers_data = collection_influencer.find().sort("statistic.engagementRate", -1).limit(5)
+    return render_template("home.html", total_influencer = total_influencer_data, influencers = influencers_data, total_campaign = total_campaign_data)
 
 @app.route("/influencer")
 @nocache

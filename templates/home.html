@@ -27,7 +27,7 @@
                     <img src="{{ url_for('static', filename=
         'images/dashboard/circle.svg') }}" class="card-img-absolute" alt="circle-image"/>                  
                     <h4 class="font-weight-normal mb-3">Total Campaign</h4>
-                    <h1 class="card-text">3</h1>
+                    <h1 class="card-text">{{ total_campaign }}</h1>
                 </div>
                 </div>
             </div>
@@ -46,20 +46,12 @@
                                                 <th>
                                                     Growth
                                                 </th>
-                                                <th colspan="2">
-                                                    Username
-                                                </th>
-                                                <th colspan="3">
-                                                    Stats
+                                                <th>
+                                                    Profil
                                                 </th>
                                                 <th>
-                                                    Prediksi
+                                                    Username
                                                 </th>
-                                            </tr>
-                                            <tr>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
                                                 <th>
                                                     Followers
                                                 </th>
@@ -69,16 +61,32 @@
                                                 <th>
                                                     Total Views
                                                 </th>
-                                                <th></th>
+                                                <th>
+                                                    Prediksi
+                                                </th>
                                             </tr>
                                         </thead>
                                         <tbody class="text-center">
                                             {% for influencer in influencers%}
                                             <tr>
                                                 <td>
-                                                    <div class="container badge badge-gradient-danger">
-                                                        -3%
-                                                    </div>
+                                                    {% if influencer.statistic|length >= 2 %}
+                                                        {% set latest_engagement = influencer.statistic[-1].engagementRate %}
+                                                        {% set second_latest_engagement = influencer.statistic[-2].engagementRate %}
+                                                        <div class="container badge {% if latest_engagement > second_latest_engagement %}badge-gradient-success{% elif latest_engagement < second_latest_engagement %}badge-gradient-danger{% else %}badge-gradient-primary{% endif %}">
+                                                            {% if latest_engagement > second_latest_engagement %}
+                                                                +{{ latest_engagement - second_latest_engagement }}%
+                                                            {% elif latest_engagement < second_latest_engagement %}
+                                                                -{{ second_latest_engagement - latest_engagement }}%
+                                                            {% else %}
+                                                                No Growth
+                                                            {% endif %}
+                                                        </div>
+                                                    {% else %}
+                                                        <div class="container badge badge-gradient-secondary">
+                                                        No Growth Data
+                                                        </div>
+                                                    {% endif %}
                                                 </td>
                                                 <td>
                                                     <img src="{{ url_for('static', filename='images/faces/face1.jpg') }}" class="mr-2" alt="image">
@@ -96,7 +104,7 @@
                                                     {{ influencer.statistic[-1].totalPlayCount | format_number }}
                                                 </td>
                                                 <td>
-                                                    <a href="{{ url_for('influencer') }}" class="btn btn-sm btn-gradient-primary btn-rounded">Detail</a>
+                                                    <a href="{{ url_for('prediksi_influencer', influencer_id=influencer._id) }}" class="btn btn-sm btn-gradient-primary btn-rounded">Detail</a>
                                                 </td>
                                             </tr>
                                             {% endfor %}
