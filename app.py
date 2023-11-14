@@ -9,7 +9,7 @@ app = Flask(__name__)
 client = MongoClient('mongodb://localhost:27017/')  
 db = client['tiktok_analysis']  
 collection_influencer = db['user_api']  
-collection_video = db['video_api'] 
+collection_campaign = db['video_api'] 
 
 def nocache(view):
     @wraps(view)
@@ -48,7 +48,7 @@ def login():
 @nocache
 def home():
     total_influencer_data = collection_influencer.count_documents({})
-    total_campaign_data = collection_video.count_documents({})
+    total_campaign_data = collection_campaign.count_documents({})
     influencers_data = collection_influencer.find().sort("statistic.engagementRate", -1).limit(5)
     return render_template("home.html", total_influencer = total_influencer_data, influencers = influencers_data, total_campaign = total_campaign_data)
 
@@ -84,26 +84,42 @@ def prediksi_influencer():
 @app.route("/kampanye")
 @nocache
 def kampanye():
-    campaigns_data = collection_video.find()
+    campaigns_data = collection_campaign.find()
 
-    # # Create a list to store campaign details with video count
-    # campaigns_data = []
+    # Create a list to store campaign details with video count
+    campaigns = []
 
-    # # Calculate the count for each campaign
-    # for campaign_data in campaigns_data:
-    #     campaign_name = campaign_data.get('namaCampaign', '')
-    #     video_count = len(campaign_data.get('video', []))
-    #     campaigns.append({
-    #         'namaCampaign': campaign_name,
-    #         'videoCount': video_count
-    #     })
+    # Calculate the count for each campaign
+    for campaign_data in campaigns_data:
+        campaign_name = campaign_data.get('namaCampaign', '')
+        video_count = len(campaign_data.get('video', []))
+        campaigns.append({
+            'namaCampaign': campaign_name,
+            'videoCount': video_count
+        })
 
-    return render_template("kampanye.html", campaigns=campaigns_data)
+    return render_template("kampanye.html", campaigns=campaigns)
 
 @app.route("/detail_kampanye")
 @nocache
 def detail_kampanye():
-    return render_template("detail_kampanye.html")
+    campaign_id = request.args.get('campaign_id')
 
+    try:
+        campaign_id = ObjectId(campaign_id)
+    except Exception as e:
+        # Handle kesalahan jika campaign_id tidak valid
+        print(f"Error converting campaign_id to ObjectId: {e}")
+        return render_template("error.html", message="Invalid Campaign ID")
+
+    # Cari campaign berdasarkan ID
+    campaign_data = collection_campaign.find_one({"_id": campaign_id})
+
+    if campaign_data:
+        # Render template dengan data campaign yang ditemukan
+        return render_template("detail_kampanye.html", campaign=campaign_data)
+    else:
+        # Handle kasus ketika campaign tidak ditemukan
+        return render_template("error.html", message="Campaign not found")
 if __name__ == '__main__':
     app.run(debug=True)
