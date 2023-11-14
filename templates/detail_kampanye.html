@@ -7,7 +7,7 @@
         <span class="page-title-icon bg-gradient-primary text-white mr-2">
           <i class="mdi mdi-home"></i>                 
         </span>
-          Emina Bright Stuff
+          {{ campaign.namaCampaign }}
       </h3>
       <nav aria-label="breadcrumb">
         <ul class="breadcrumb">
@@ -39,11 +39,11 @@
           <div class="card-body">
             <!-- <h4 class="card-title">Emina Bright Stuff</h4> -->
             <div class="table-responsive">
-              <table class="table">
+              <table class="table text-center">
                 <thead>
                   <tr>
                     <th>No.</th>
-                    <th>URL Post</th>
+                    <th>URL</th>
                     <th>Creator</th>
                     <th>Likes</th>
                     <th>Views</th>
@@ -54,40 +54,24 @@
                   </tr>
                 </thead>
                 <tbody>
-                  {% for influencer in influencers %}
+                  {% for video in campaign.video %}
                   <tr>
-                    <td>
-                      {{ loop.index }}
-                    </td>
-                    <td>
-                        {{ influencer.username }}
-                    </td>
-                    <td>
-                        {{ influencer.statistic[-1].followerCount | format_number }}
-                    </td>
-                    <td>
-                        {{ influencer.statistic[-1].heartCount | format_number }}
-                    </td>
-                    <td>
-                        {{ influencer.statistic[-1].totalPlayCount | format_number }}
-                    </td>
-                    <td>
-                        {{ influencer.statistic[-1].totalCommentCount | format_number }}
-                    </td>
-                    <td>
-                        {{ influencer.statistic[-1].totalShareCount | format_number }}
-                    </td>
-                    <td>
-                        {{ influencer.statistic[-1].engagementRate | format_percentage }}
-                    </td>
-                    <td>
-                      <button type="button" class="btn btn-sm btn-gradient-info" data-toggle="modal" data-target="#editModal">
-                        <i class="mdi mdi-pencil"></i>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-gradient-danger" data-toggle="modal" data-target="#deleteModal">
-                        <i class="mdi mdi-delete"></i>
-                      </button>
-                    </td>
+                      <td>{{ loop.index }}</td>
+                      <td><a href="{{ video.video_url }}" target="_blank">Link</a></td>
+                      <td>{{ video.username }}</td>
+                      <td>{{ video.likeCount }}</td>
+                      <td>{{ video.playCount }}</td>
+                      <td>{{ video.commentCount }}</td>
+                      <td>{{ video.shareCount }}</td>
+                      <td>{{ video.engagementRate | format_percentage }}</td>
+                      <td>
+                          <button type="button" class="btn btn-sm btn-gradient-info" data-toggle="modal" data-target="#editModal">
+                              <i class="mdi mdi-pencil"></i>
+                          </button>
+                          <button type="button" class="btn btn-sm btn-gradient-danger" data-toggle="modal" data-target="#deleteModal">
+                              <i class="mdi mdi-delete"></i>
+                          </button>
+                      </td>
                   </tr>
                   {% endfor %}
                   

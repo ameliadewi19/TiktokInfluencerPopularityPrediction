@@ -57,9 +57,9 @@
                   <tr>
                     <td>{{ loop.index }}</td>
                     <td>{{ campaign.namaCampaign }}</td>
-                    <!-- <td>{{ campaign['videoCount'] }}</td> -->
+                    <td>{{ campaign['videoCount'] }}</td>
                     <td>
-                      <a href="{{ url_for('detail_kampanye') }}" class="btn btn-sm btn-gradient-primary btn-rounded justify-content-center">Detail</a>
+                      <a href="{{ url_for('detail_kampanye', campaign_id=campaign._id) }}" class="btn btn-sm btn-gradient-primary btn-rounded justify-content-center">Detail</a>
                     </td>
                     <td>
                       <button type="button" class="btn btn-sm btn-gradient-info" data-toggle="modal" data-target="#editModal">
