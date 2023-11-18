@@ -49,8 +49,10 @@ def login():
 def home():
     total_influencer_data = collection_influencer.count_documents({})
     total_campaign_data = collection_campaign.count_documents({})
-    influencers_data = collection_influencer.find().sort("statistic.engagementRate", -1).limit(5)
-    return render_template("home.html", total_influencer = total_influencer_data, influencers = influencers_data, total_campaign = total_campaign_data)
+    influencers_data = collection_influencer.find()
+    influencers_sorted = sorted(influencers_data, key=lambda x: x['statistic'][-1]['engagementRate'], reverse=True)
+    top_5_influencers = influencers_sorted[:5]
+    return render_template("home.html", total_influencer = total_influencer_data, influencers = top_5_influencers, total_campaign = total_campaign_data)
 
 @app.route("/influencer")
 @nocache
