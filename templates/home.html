@@ -86,7 +86,7 @@
                                                     {% endif %}
                                                 </td>
                                                 <td>
-                                                    <img src="{{ url_for('static', filename='images/faces/face1.jpg') }}" class="mr-2" alt="image">
+                                                    <img src="{{ influencer.avatar }}" class="mr-2" alt="image">
                                                 </td>
                                                 <td class="text-left">
                                                     {{ influencer.username }}
@@ -101,7 +101,7 @@
                                                     {{ influencer.statistic[-1].totalPlayCount | format_number }}
                                                 </td>
                                                 <td>
-                                                    <a href="{{ url_for('prediksi_influencer', influencer_id=influencer._id) }}" class="btn btn-sm btn-gradient-primary btn-rounded">Detail</a>
+                                                    <a href="{{ url_for('prediksi_influencer', influencer_id=influencer._id, lastPage='home') }}" class="btn btn-sm btn-gradient-primary btn-rounded">Detail</a>
                                                 </td>
                                             </tr>
                                             {% endfor %}

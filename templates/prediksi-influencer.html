@@ -4,10 +4,9 @@
   <div class="content-wrapper">
     <div class="page-header">
       <h3 class="page-title">
-        <a href="/influencer" class="page-title-icon bg-gradient-primary text-white mr-2">
+        <a href="/{{lastPage}}" class="page-title-icon bg-gradient-primary text-white mr-2">
             <i class="mdi mdi-arrow-left-bold"></i>
         </a>
-        
         Influencer Engagement Prediction
       </h3>
       <nav aria-label="breadcrumb">
@@ -99,7 +98,7 @@
                                 </button>
                                 <div class="mt-2">
                                     <h4 style="font-weight: bold;">Engagement</h4>
-                                    <h5 class="text-gray">{{ influencer.statistic[-1].totalPlayCount | format_number }}</h5>
+                                    <h5 class="text-gray">{{ influencer.statistic[-1].engagementRate | format_percentage }}</h5>
                                 </div>
                             </div>
                         </div>

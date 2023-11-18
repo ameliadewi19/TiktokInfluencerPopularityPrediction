@@ -64,6 +64,7 @@ def influencer():
 @nocache
 def prediksi_influencer():
     influencer_id = request.args.get('influencer_id')
+    lastPage = request.args.get('lastPage')
 
     # Ubah influencer_id menjadi tipe ObjectId
     try:
@@ -78,7 +79,7 @@ def prediksi_influencer():
 
     if influencer_data:
         # Render template dengan data influencer yang ditemukan
-        return render_template("prediksi-influencer.html", influencer=influencer_data)
+        return render_template("prediksi-influencer.html", influencer=influencer_data, lastPage = lastPage)
     else:
         # Handle kasus ketika influencer tidak ditemukan
         return render_template("error.html", message="Influencer not found")
