@@ -116,6 +116,7 @@ def influencer():
 # @login_required
 def prediksi_influencer():
     influencer_id = request.args.get('influencer_id')
+    lastPage = request.args.get('lastPage')
     
     # Ubah influencer_id menjadi tipe ObjectId
     try:
