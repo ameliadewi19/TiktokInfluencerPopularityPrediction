@@ -4,10 +4,9 @@
   <div class="content-wrapper">
     <div class="page-header">
       <h3 class="page-title">
-        <a href="/influencer" class="page-title-icon bg-gradient-primary text-white mr-2">
+        <a href="/{{lastPage}}" class="page-title-icon bg-gradient-primary text-white mr-2">
             <i class="mdi mdi-arrow-left-bold"></i>
         </a>
-        
         Influencer Engagement Prediction
       </h3>
       <nav aria-label="breadcrumb">
@@ -24,12 +23,12 @@
         <div class="card">
           <div class="card-body">
             <div class="row">
-                <div class="col-md-2">
-                    <img src="{{ url_for('static', filename='images/faces/face1.jpg') }}" class="rounded-circle mr-2" alt="image">
+                <div class="col-md-3">
+                  <img src="{{ url_for('static', filename='avatar/' + influencer.username + '_avatar.jpg') }}" class="rounded-circle ml-3 mt-4" style="width: 80%;" alt="image">
                 </div>
-                <div class="col-md-10">
+                <div class="col-md-9">
                     <h3>
-                        <span class="" style="font-weight: 800;">{{influencer.nickname}} | </span>
+                        <span class="" style="font-weight: 800;">{{ influencer.nickname }} | </span>
                         <span class="text-gray" style="font-weight: 200;">@{{influencer.username}}</span>
                     </h3>
 
@@ -99,7 +98,7 @@
                                 </button>
                                 <div class="mt-2">
                                     <h4 style="font-weight: bold;">Engagement</h4>
-                                    <h5 class="text-gray">{{ influencer.statistic[-1].totalPlayCount | format_number }}</h5>
+                                    <h5 class="text-gray">{{ influencer.statistic[-1].engagementRate | format_percentage }}</h5>
                                 </div>
                             </div>
                         </div>
@@ -113,14 +112,255 @@
     </div>
 
     <div class="row">
-        <div class="col-12 grid-margin">
-          <div class="card">
-            <div class="card-body">
-                <h4 class="card-title">Line chart</h4>
-                <canvas id="lineChart" style="height:250px"></canvas>
-            </div>
+      <div class="col-12 grid-margin">
+        <div class="card">
+          <div class="card-body">
+            <div class="row mt-2 mb-4">
+              <div class="col">
+                <label for="chartDropdown"><h4 class="card-title">Select Chart: </h4></label>
+                <select id="chartDropdown" class="form-control">
+                  <option value="chart1">Prediksi Engagement</option>
+                  <option value="chart2">Prediksi Followers</option>
+                  <option value="chart3">Prediksi Likes</option>
+                  <option value="chart4">Prediksi Views</option>
+                  <option value="chart5">Prediksi Comments</option>
+                  <option value="chart6">Prediksi Shares</option>
+                </select>
+              </div>
+            </div>  
+            <h4 class="card-title">Chart</h4>
+            <canvas id="lineChart1" style="height:250px"></canvas>
+            <canvas id="lineChart2" style="height:250px"></canvas>
+            <canvas id="lineChart3" style="height:250px"></canvas>
+            <canvas id="lineChart4" style="height:250px"></canvas>
+            <canvas id="lineChart5" style="height:250px"></canvas>
+            <canvas id="lineChart6" style="height:250px"></canvas>
           </div>
         </div>
       </div>
     </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Add this before the closing body tag or in a separate JavaScript file -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        
+        var engagement_rates = {{ engagement_rates }};
+        var followers = {{ followers }};
+        var likes = {{ likes }};
+        var views = {{ views }};
+        var comments = {{ comments }};
+        var shares = {{ shares }};
+    
+        var date_retrieve = {{ date_retrieve | tojson | safe }};
+    
+        // Get the data for chart 1 (modify this according to your data structure)
+        var chartData1 = {
+          labels: date_retrieve,
+          datasets: [
+            {
+              label: "Prediksi Engagement Rate",
+              data: engagement_rates,
+              borderColor: "rgba(75, 192, 192, 1)",
+              borderWidth: 1,
+              fill: false,
+            },
+            // Add more datasets if needed
+          ],
+        };
+    
+        // Get the data for chart 2 (modify this according to your data structure)
+        var chartData2 = {
+          labels: date_retrieve,
+          datasets: [
+            {
+              label: "Prediksi Followers",
+              data: followers,
+              borderColor: "rgba(255, 99, 132, 1)",
+              borderWidth: 1,
+              fill: false,
+            },
+            // Add more datasets if needed
+          ],
+        };
+    
+        // Get the data for chart 3 (modify this according to your data structure)
+        var chartData3 = {
+          labels: date_retrieve,
+          datasets: [
+            {
+              label: "Prediksi Likes",
+              data: likes,
+              borderColor: "rgba(255, 99, 132, 1)",
+              borderWidth: 1,
+              fill: false,
+            },
+            // Add more datasets if needed
+          ],
+        };
+    
+        // Get the data for chart 4 (modify this according to your data structure)
+        var chartData4 = {
+          labels: date_retrieve,
+          datasets: [
+            {
+              label: "Prediksi Views",
+              data: views,
+              borderColor: "rgba(255, 99, 132, 1)",
+              borderWidth: 1,
+              fill: false,
+            },
+            // Add more datasets if needed
+          ],
+        };
+    
+        // Get the data for chart 5 (modify this according to your data structure)
+        var chartData5 = {
+          labels: date_retrieve,
+          datasets: [
+            {
+              label: "Prediksi Comments",
+              data: comments,
+              borderColor: "rgba(255, 99, 132, 1)",
+              borderWidth: 1,
+              fill: false,
+            },
+            // Add more datasets if needed
+          ],
+        };
+    
+        // Get the data for chart 6 (modify this according to your data structure)
+        var chartData6 = {
+          labels: date_retrieve,
+          datasets: [
+            {
+              label: "Prediksi Shares",
+              data: shares,
+              borderColor: "rgba(255, 99, 132, 1)",
+              borderWidth: 1,
+              fill: false,
+            },
+            // Add more datasets if needed
+          ],
+        };
+    
+        // Get the canvas elements
+        var ctx1 = document.getElementById("lineChart1").getContext("2d");
+        var ctx2 = document.getElementById("lineChart2").getContext("2d");
+        var ctx3 = document.getElementById("lineChart3").getContext("2d");
+        var ctx4 = document.getElementById("lineChart4").getContext("2d");
+        var ctx5 = document.getElementById("lineChart5").getContext("2d");
+        var ctx6 = document.getElementById("lineChart6").getContext("2d");
+    
+        // Create the line charts
+        var lineChart1 = new Chart(ctx1, {
+          type: "line",
+          data: chartData1,
+          options: {
+            // Add chart options as needed
+          },
+        });
+    
+        var lineChart2 = new Chart(ctx2, {
+          type: "line",
+          data: chartData2,
+          options: {
+            // Add chart options as needed
+          },
+        });
+    
+        var lineChart3 = new Chart(ctx3, {
+          type: "line",
+          data: chartData3,
+          options: {
+            // Add chart options as needed
+          },
+        });
+    
+        var lineChart4 = new Chart(ctx4, {
+          type: "line",
+          data: chartData4,
+          options: {
+            // Add chart options as needed
+          },
+        });
+    
+        var lineChart5 = new Chart(ctx5, {
+          type: "line",
+          data: chartData5,
+          options: {
+            // Add chart options as needed
+          },
+        });
+    
+        var lineChart6 = new Chart(ctx6, {
+          type: "line",
+          data: chartData6,
+          options: {
+            // Add chart options as needed
+          },
+        });
+    
+        // Function to update chart based on user selection
+        function updateChart(selectedChart) {
+          // Customize this function to show/hide the appropriate charts based on user selection
+          if (selectedChart === 'chart1') {
+            lineChart1.canvas.style.display = 'block';
+            lineChart2.canvas.style.display = 'none';
+            lineChart3.canvas.style.display = 'none';
+            lineChart4.canvas.style.display = 'none';
+            lineChart5.canvas.style.display = 'none';
+            lineChart6.canvas.style.display = 'none';
+          } else if (selectedChart === 'chart2') {
+            lineChart1.canvas.style.display = 'none';
+            lineChart2.canvas.style.display = 'block';
+            lineChart3.canvas.style.display = 'none';
+            lineChart4.canvas.style.display = 'none';
+            lineChart5.canvas.style.display = 'none';
+            lineChart6.canvas.style.display = 'none';
+          } else if (selectedChart === 'chart3') {
+            lineChart1.canvas.style.display = 'none';
+            lineChart2.canvas.style.display = 'none';
+            lineChart3.canvas.style.display = 'block';
+            lineChart4.canvas.style.display = 'none';
+            lineChart5.canvas.style.display = 'none';
+            lineChart6.canvas.style.display = 'none';
+          } else if (selectedChart === 'chart4') {
+            lineChart1.canvas.style.display = 'none';
+            lineChart2.canvas.style.display = 'none';
+            lineChart3.canvas.style.display = 'none';
+            lineChart4.canvas.style.display = 'block';
+            lineChart5.canvas.style.display = 'none';
+            lineChart6.canvas.style.display = 'none';
+          } else if (selectedChart === 'chart5') {
+            lineChart1.canvas.style.display = 'none';
+            lineChart2.canvas.style.display = 'none';
+            lineChart3.canvas.style.display = 'none';
+            lineChart4.canvas.style.display = 'none';
+            lineChart5.canvas.style.display = 'block';
+            lineChart6.canvas.style.display = 'none';
+          } else if (selectedChart === 'chart6') {
+            lineChart1.canvas.style.display = 'none';
+            lineChart2.canvas.style.display = 'none';
+            lineChart3.canvas.style.display = 'none';
+            lineChart4.canvas.style.display = 'none';
+            lineChart5.canvas.style.display = 'none';
+            lineChart6.canvas.style.display = 'block';
+          }
+        }
+    
+        // Example: Add an event listener to the dropdown and call updateChart on change
+        var chartDropdown = document.getElementById('chartDropdown');
+        chartDropdown.addEventListener('change', function () {
+          var selectedChart = chartDropdown.value;
+          updateChart(selectedChart);
+        });
+    
+        // Initial setup: Show chart 1 by default
+        updateChart('chart1');
+      });
+    </script>
+    
+  
 {% endblock %}

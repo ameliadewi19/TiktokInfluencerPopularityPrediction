@@ -46,10 +46,7 @@
                                                 <th>
                                                     Growth
                                                 </th>
-                                                <th>
-                                                    Profil
-                                                </th>
-                                                <th>
+                                                <th colspan="2">
                                                     Username
                                                 </th>
                                                 <th>
@@ -67,7 +64,7 @@
                                             </tr>
                                         </thead>
                                         <tbody class="text-center">
-                                            {% for influencer in influencers%}
+                                            {% for influencer in influencers %}
                                             <tr>
                                                 <td>
                                                     {% if influencer.statistic|length >= 2 %}
@@ -75,21 +72,21 @@
                                                         {% set second_latest_engagement = influencer.statistic[-2].engagementRate %}
                                                         <div class="container badge {% if latest_engagement > second_latest_engagement %}badge-gradient-success{% elif latest_engagement < second_latest_engagement %}badge-gradient-danger{% else %}badge-gradient-primary{% endif %}">
                                                             {% if latest_engagement > second_latest_engagement %}
-                                                                +{{ latest_engagement - second_latest_engagement }}%
+                                                                +{{ (latest_engagement - second_latest_engagement)|round(2) }}%
                                                             {% elif latest_engagement < second_latest_engagement %}
-                                                                -{{ second_latest_engagement - latest_engagement }}%
+                                                                -{{ (second_latest_engagement - latest_engagement)|round(2) }}%
                                                             {% else %}
                                                                 No Growth
                                                             {% endif %}
                                                         </div>
                                                     {% else %}
-                                                        <div class="container badge badge-gradient-secondary">
+                                                        <div class="container badge badge-gradient-dark">
                                                         No Growth Data
                                                         </div>
                                                     {% endif %}
                                                 </td>
                                                 <td>
-                                                    <img src="{{ url_for('static', filename='images/faces/face1.jpg') }}" class="mr-2" alt="image">
+                                                    <img src="{{ influencer.avatar }}" class="mr-2" alt="image">
                                                 </td>
                                                 <td class="text-left">
                                                     {{ influencer.username }}
@@ -104,7 +101,7 @@
                                                     {{ influencer.statistic[-1].totalPlayCount | format_number }}
                                                 </td>
                                                 <td>
-                                                    <a href="{{ url_for('prediksi_influencer', influencer_id=influencer._id) }}" class="btn btn-sm btn-gradient-primary btn-rounded">Detail</a>
+                                                    <a href="{{ url_for('prediksi_influencer', influencer_id=influencer._id, lastPage='home') }}" class="btn btn-sm btn-gradient-primary btn-rounded">Detail</a>
                                                 </td>
                                             </tr>
                                             {% endfor %}
