@@ -1,22 +1,46 @@
 <!-- Add Post Modal -->
-<div class="modal fade" id="addPostModal" tabindex="-1" role="dialog" aria-labelledby="addPostModalLabel" aria-hidden="true">
+{% macro render_add_post_modal(campaign) %}
+  <div class="modal fade" id="addPostModal{{ campaign._id }}" tabindex="-1" role="dialog" aria-labelledby="addPostModalLabel{{ campaign._id }}" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="addPostLabel">Tambah Post</h5>
+          <h5 class="modal-title" id="addPostLabel{{ campaign._id }}">Tambah Post</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
-          <label for="addVideoURL">URL Video</label>
-          <input type="text" class="form-control" id="addVideoURL" value="https://www.tiktok.com/@nadiiameii/video/7288267293010775301">
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-sm btn-danger btn-rounded" data-dismiss="modal">Batal</button>
-          <button type="button" class="btn btn-sm btn-primary btn-rounded">Simpan</button>
-        </div>
+        <form action="{{ url_for('save_posts', campaign_id=campaign._id) }}" method="POST" id="addPostForm">
+          <div class="modal-body text-left">
+            <div id="videoURLContainer">
+              <div class="form-group">
+                <label for="addVideoURL">URL Video</label>
+                <input type="text" class="form-control" name="videoURLs[]" required>
+              </div>
+            </div>
+            <button type="button" class="btn btn-sm btn-success" onclick="addVideoURLField()">Tambah URL Baru</button>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-sm btn-danger btn-rounded" data-dismiss="modal">Batal</button>
+              <button type="submit" class="btn btn-sm btn-primary btn-rounded">Simpan</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
+
+  <script>
+    function addVideoURLField() {
+      var container = document.getElementById('videoURLContainer');
+      var newField = document.createElement('div');
+      newField.className = 'form-group d-flex align-items-center'; // Added classes for flex layout
+      newField.innerHTML = '<input type="text" class="form-control" name="videoURLs[]" required>' +
+                           '<button type="button" class="btn btn-sm btn-danger ml-2" onclick="removeVideoURLField(this)">&times;</button>'; // Using × as the remove icon
+      container.appendChild(newField);
+    }
   
+    function removeVideoURLField(element) {
+      element.parentNode.remove();
+    }
+  </script>
+  
+{% endmacro %}

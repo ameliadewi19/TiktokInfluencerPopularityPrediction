@@ -1,0 +1,28 @@
+<!-- Edit Modal -->
+{% macro render_edit_video(campaign, video, index) %}
+  <div class="modal fade" id="editVideo{{ index }}" tabindex="-1" role="dialog" aria-labelledby="editVideoLabel{{ index }}" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editVideoLabel{{ index }}">Edit Kampanye</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="{{ url_for('edit_video', campaign_id=campaign._id, video_url=video.video_url) }}" method="POST">
+                <div class="modal-body text-left">
+                    <div class="form-group">
+                        <label for="editVideoURL">URL Video</label>
+                        <input type="text" class="form-control" id="editVideoURL" name="edited_video_url" value="{{ video.video_url }}">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-danger btn-rounded" data-dismiss="modal">Batal</button>
+                    <button type="submit" class="btn btn-sm btn-primary btn-rounded">Simpan</button>
+                </div>
+            </form>
+                  
+        </div>
+    </div>
+  </div>
+{% endmacro %}
