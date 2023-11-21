@@ -18,12 +18,12 @@
         </ul>
       </nav>
     </div>
-    <div class="input-group mb-4" style="width: 300px;">
+    <!-- <div class="input-group mb-4" style="width: 300px;">
         <div class="input-group-prepend">
           <span class="input-group-text bg-white text-primary" style="border-bottom-left-radius: 20px; border-top-left-radius: 20px;"><i class="mdi mdi-magnify"></i></span>
         </div>
         <input type="text" class="form-control" aria-label="" placeholder="Masukan username influencer" style="border-bottom-right-radius: 20px; border-top-right-radius: 20px;">
-      </div>
+      </div> -->
     <div class="row">
     </div>
     <div class="row">
@@ -33,7 +33,7 @@
             <h4 class="card-title">Influencer</h4>
             <h6 class="mb-4">Latest Retrieve: 19 Oktober 2023</h6>
             <div class="table-responsive">
-              <table class="table">
+              <table id="influencersTable" class="table">
                 <thead>
                   <tr>
                     <th>No.</th>
@@ -55,7 +55,7 @@
                         {{loop.index}}
                     </td>
                     <td>
-                      <img src="{{ url_for('static', filename='images/faces/face1.jpg') }}" class="mr-2" alt="image">
+                      <img src="{{ url_for('static', filename='avatar/' + influencer.username + '_avatar.jpg') }}" class="mr-2" alt="image">
                     </td>
                     <td>
                         {{ influencer.username }}
@@ -92,4 +92,17 @@
       </div>
     </div>
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      let table = new DataTable('#influencersTable',);
+    });
+    // document.addEventListener('DOMContentLoaded', function () {
+    // let table = new DataTable('#influencersTable', {
+    //         dom: 'Bfrtip',
+    //         buttons: [
+    //             'copy', 'csv', 'excel', 'print', 'pdf'
+    //         ]
+    //     });
+    // });  
+  </script>  
 {% endblock %}
