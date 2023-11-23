@@ -30,14 +30,17 @@
         </div>
       </div>
       <div class="col-md-6 mb-3 text-right">
-        <button type="button" class="btn btn-sm btn-gradient-success btn-rounded justify-content-center"  data-toggle="modal" data-target="#addPostModal">+ Add Post</button>
+        <button type="button" class="btn btn-sm btn-gradient-success btn-rounded justify-content-center" data-toggle="modal" data-target="#addPostModal{{campaign._id}}">+ Add Post</button>
+        {% from 'add_post.html' import render_add_post_modal %}
+          {{ render_add_post_modal(campaign) }}
       </div>
     </div>
     <div class="row">
       <div class="col-12 grid-margin">
         <div class="card">
           <div class="card-body">
-            <!-- <h4 class="card-title">Emina Bright Stuff</h4> -->
+            <!-- <h4 class="card-title">Kampanye</h4> -->
+            <h6 class="mb-4">Latest Retrieve: 19 Oktober 2023 <button type="button" class="btn btn-sm btn-gradient-info btn-rounded ml-4">Sync now</button></h6>
             <div class="table-responsive">
               <table class="table text-center">
                 <thead>
@@ -63,14 +66,18 @@
                       <td>{{ video.playCount }}</td>
                       <td>{{ video.commentCount }}</td>
                       <td>{{ video.shareCount }}</td>
-                      <td>{{ video.engagementRate | format_percentage }}</td>
+                      <td>{{ video.engagementRate }}</td>
                       <td>
-                          <button type="button" class="btn btn-sm btn-gradient-info" data-toggle="modal" data-target="#editModal">
+                          <button type="button" class="btn btn-sm btn-gradient-info" data-toggle="modal" data-target="#editVideo{{ loop.index }}">
                               <i class="mdi mdi-pencil"></i>
                           </button>
-                          <button type="button" class="btn btn-sm btn-gradient-danger" data-toggle="modal" data-target="#deleteModal">
+                          {% from 'edit_video.html' import render_edit_video %}
+                            {{ render_edit_video(campaign, video, loop.index) }}
+                          <button type="button" class="btn btn-sm btn-gradient-danger" data-toggle="modal" data-target="#deleteVideo{{ loop.index }}">
                               <i class="mdi mdi-delete"></i>
                           </button>
+                          {% from 'delete_video.html' import render_delete_video %}
+                            {{ render_delete_video(campaign, video, loop.index) }}
                       </td>
                   </tr>
                   {% endfor %}
@@ -83,6 +90,4 @@
       </div>
     </div>
   </div>
-
-  {% include 'add_post.html' %}
 {% endblock %}
