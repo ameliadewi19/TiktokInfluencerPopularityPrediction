@@ -2,10 +2,11 @@ from flask import Flask, render_template, request, make_response, session, redir
 from bson import ObjectId
 from pymongo import MongoClient
 from functools import wraps, update_wrapper
-from datetime import datetime
+from datetime import datetime, timedelta
 from flask_bcrypt import Bcrypt
 import secrets
 import json
+import regresi
 
 app = Flask(__name__)
 bcrypt = Bcrypt(app)
@@ -138,7 +139,7 @@ def prediksi_influencer():
         last_7_statistics = sorted(last_7_statistics, key=lambda x: datetime.strptime(x.get('dateRetrieve'), '%Y-%m-%d'))
 
         # Print the sorted list for debugging
-        print("Sorted last_7_statistics:", last_7_statistics)
+        # print("Sorted last_7_statistics:", last_7_statistics)
 
         # Perbarui data influencer dengan statistik terakhir
         influencer_data['statistic'] = last_7_statistics
@@ -146,31 +147,60 @@ def prediksi_influencer():
         # Ekstrak 'dateRetrieve' dari 'statistics' dan masukkan ke dalam array
         date_retrieve = [entry.get('dateRetrieve', '0') for entry in last_7_statistics]
 
+        # Hitung nilai predict_engagement (sesuaikan dengan logika bisnis Anda)
+
         # Ekstrak 'engagementRate' dari 'statistics' dan masukkan ke dalam array
         engagement_rates = [entry.get('engagementRate', 0) for entry in last_7_statistics]
 
         # Ekstrak 'follower' dari 'statistics' dan masukkan ke dalam array
         followers = [entry.get('followerCount', 0) for entry in last_7_statistics]
+        predict_follower = regresi.perform_linear_regression(influencer_data['statistic'], "followerCount")
+        predict_follower = next(iter(predict_follower))
+        predict_follower_int = int(predict_follower)
+        followers.append(predict_follower_int)
 
         # Ekstrak 'like' dari 'statistics' dan masukkan ke dalam array
         likes = [entry.get('heartCount', 0) for entry in last_7_statistics]
+        predict_likes = regresi.perform_linear_regression(influencer_data['statistic'], "heartCount")
+        predict_likes = next(iter(predict_likes))
+        predict_likes_int = int(predict_likes)
+        likes.append(predict_likes_int)
 
         # Ekstrak 'views' dari 'statistics' dan masukkan ke dalam array
         views = [entry.get('totalPlayCount', 0) for entry in last_7_statistics]
+        predict_views = regresi.perform_linear_regression(influencer_data['statistic'], "totalPlayCount")
+        predict_views = next(iter(predict_views))
+        predict_views_int = int(predict_views)
+        views.append(predict_views_int)
 
         # Ekstrak 'comment' dari 'statistics' dan masukkan ke dalam array
         comments = [entry.get('totalCommentCount', 0) for entry in last_7_statistics]
+        predict_comments = regresi.perform_linear_regression(influencer_data['statistic'], "totalCommentCount")
+        predict_comments = next(iter(predict_comments))
+        predict_comments_int = int(predict_comments)
+        comments.append(predict_comments_int)
 
         # Ekstrak 'share' dari 'statistics' dan masukkan ke dalam array
         shares = [entry.get('totalShareCount', 0) for entry in last_7_statistics]
+        predict_shares = regresi.perform_linear_regression(influencer_data['statistic'], "totalShareCount")
+        predict_shares = next(iter(predict_shares))
+        predict_shares_int = int(predict_shares)
+        shares.append(predict_shares_int)
 
-        # # Ekstrak 'dateRetrieve' dari 'statistics' dan masukkan ke dalam array
-        # date_retrieve = [entry.get('dateRetrieve', '0') for entry in last_7_statistics]
+        # hitung engagement rate
+        predict_engagement = (predict_likes_int + predict_comments_int + predict_shares_int) / predict_views_int
+        engagement_rates.append(predict_engagement)
 
         # Change the date format to use double quotes
         date_retrieve = [date.replace("'", '"') for date in date_retrieve]
 
-        print(date_retrieve)
+        # Ambil tanggal terakhir dari array
+        last_date_str = date_retrieve[-1]
+        last_date = datetime.strptime(last_date_str, '%Y-%m-%d')
+        next_date = last_date + timedelta(days=1)
+        next_date_str = next_date.strftime('%Y-%m-%d')
+
+        date_retrieve.append(next_date_str)
 
         # Render template dengan data influencer yang ditemukan
         return render_template("prediksi-influencer.html", 

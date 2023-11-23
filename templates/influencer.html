@@ -31,7 +31,7 @@
         <div class="card">
           <div class="card-body">
             <h4 class="card-title">Influencer</h4>
-            <h6 class="mb-4">Latest Retrieve: 19 Oktober 2023</h6>
+            <h6 class="mb-4">Latest Retrieve: 19 Oktober 2023 <button type="button" class="btn btn-sm btn-gradient-info btn-rounded ml-2 ">Sync now</button></h6>
             <div class="table-responsive">
               <table id="influencersTable" class="table">
                 <thead>
@@ -94,8 +94,13 @@
   </div>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      let table = new DataTable('#influencersTable',);
+      let table = new DataTable('#influencersTable', {
+        sortable: true, // Enable sorting
+        perPage: 10, // Adjust the number of rows per page as needed
+        sort: [8, 'desc'], // Sort by the 9th column (index 8) in descending order ('desc')
+      });
     });
+
     // document.addEventListener('DOMContentLoaded', function () {
     // let table = new DataTable('#influencersTable', {
     //         dom: 'Bfrtip',

@@ -155,18 +155,21 @@
     
         var date_retrieve = {{ date_retrieve | tojson | safe }};
     
-        // Get the data for chart 1 (modify this according to your data structure)
+        var lastDataIndex = date_retrieve.length - 1;  // Menunjukkan indeks data terakhir
+
         var chartData1 = {
           labels: date_retrieve,
           datasets: [
             {
               label: "Prediksi Engagement Rate",
               data: engagement_rates,
-              borderColor: "rgba(75, 192, 192, 1)",
+              borderColor: "rgba(255, 165, 0, 1)",
               borderWidth: 1,
               fill: false,
+              // pointStyle: ['circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'star'],
+              pointBackgroundColor: ["White", "White", "White", "White", "White", "White", "White", "Yellow"],
+              radius: 6,  // Ukuran radius poin
             },
-            // Add more datasets if needed
           ],
         };
     
@@ -177,9 +180,12 @@
             {
               label: "Prediksi Followers",
               data: followers,
-              borderColor: "rgba(255, 99, 132, 1)",
+              borderColor: "rgba(180, 100, 200, 1)",
               borderWidth: 1,
               fill: false,
+              // pointStyle: ['circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'circle', 'star'],
+              pointBackgroundColor: ["White", "White", "White", "White", "White", "White", "White", "Yellow"],
+              radius: 6
             },
             // Add more datasets if needed
           ],
@@ -195,6 +201,8 @@
               borderColor: "rgba(255, 99, 132, 1)",
               borderWidth: 1,
               fill: false,
+              pointBackgroundColor: ["White", "White", "White", "White", "White", "White", "White", "Yellow"],
+              radius: 6
             },
             // Add more datasets if needed
           ],
@@ -207,9 +215,11 @@
             {
               label: "Prediksi Views",
               data: views,
-              borderColor: "rgba(255, 99, 132, 1)",
+              borderColor: "rgba(144, 238, 144, 1)",
               borderWidth: 1,
               fill: false,
+              pointBackgroundColor: ["White", "White", "White", "White", "White", "White", "White", "Yellow"],
+              radius: 6
             },
             // Add more datasets if needed
           ],
@@ -222,9 +232,11 @@
             {
               label: "Prediksi Comments",
               data: comments,
-              borderColor: "rgba(255, 99, 132, 1)",
+              borderColor: "rgba(100, 120, 200, 1)",
               borderWidth: 1,
               fill: false,
+              pointBackgroundColor: ["White", "White", "White", "White", "White", "White", "White", "Yellow"],
+              radius: 6
             },
             // Add more datasets if needed
           ],
@@ -237,9 +249,11 @@
             {
               label: "Prediksi Shares",
               data: shares,
-              borderColor: "rgba(255, 99, 132, 1)",
+              borderColor: "rgba(100, 100, 100, 50)",
               borderWidth: 1,
               fill: false,
+              pointBackgroundColor: ["White", "White", "White", "White", "White", "White", "White", "Yellow"],
+              radius: 6
             },
             // Add more datasets if needed
           ],

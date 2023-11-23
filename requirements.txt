@@ -2,3 +2,6 @@ Flask
 Werkzeug
 pymongo
 Flask-Bcrypt
+scikit-learn
+matplotlib
+numpy
