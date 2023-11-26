@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, make_response, session, redirect, url_for
+from flask import Flask, render_template, request, make_response, session, redirect, url_for, jsonify, send_file
 from bson import ObjectId
 from pymongo import MongoClient
 from functools import wraps, update_wrapper
@@ -6,7 +6,11 @@ from datetime import datetime, timedelta
 from flask_bcrypt import Bcrypt
 import secrets
 import json
+import bson
 import regresi
+import generate_dummy
+import os
+from apscheduler.schedulers.background import BackgroundScheduler
 
 app = Flask(__name__)
 bcrypt = Bcrypt(app)
@@ -82,7 +86,7 @@ def login_process():
     else:
         print("Login failed")
         # If the user doesn't exist or the password is incorrect, show an error
-        return render_template('login.html', error='Invalid credentials')
+        return render_template('/', error='Invalid credentials')
 
 @app.route('/logout')
 def logout():
@@ -93,7 +97,7 @@ def logout():
 
 @app.route("/home")
 @nocache
-@login_required
+# @login_required
 def home():
     print("Session in home route:", session)
     total_influencer_data = collection_influencer.count_documents({})
@@ -105,12 +109,17 @@ def home():
 
 @app.route("/influencer")
 @nocache
-@login_required
+# @login_required
 def influencer():
     # Mengambil data influencer dari MongoDB dan mengurutkannya berdasarkan engagement rate
     influencers_data = collection_influencer.find().sort("statistic.engagementRate", -1)
 
-    return render_template("influencer.html", influencers=influencers_data)
+    latest_data = get_influencer_latest()
+    date_retrieve = latest_data[0]['statistic']['dateRetrieve']
+    date_retrieve_datetime = datetime.strptime(date_retrieve, '%Y-%m-%d')
+    formatted_date = date_retrieve_datetime.strftime('%A, %d %B %Y')
+
+    return render_template("influencer.html", influencers=influencers_data, date_retrieve=formatted_date)
 
 @app.route("/prediksi-influencer")
 @nocache
@@ -382,6 +391,64 @@ def delete_video():
     except Exception as e:
         print(f"Error deleting video: {e}")
         return redirect(url_for('detail_kampanye', campaign_id=campaign_id))
+
+@app.route('/sync_influencer')
+@nocache
+def sync_influencer():
+    latest_data = get_influencer_latest()
+    latest_data_jsonify = jsonify(latest_data)
+
+    # date_retrieve = latest_data[0]['statistic']['dateRetrieve']
+    
+    # Save the latest data to a JSON file
+    save_path = 'latest_data_influencer.json'
+    with open(save_path, 'w') as json_file:
+        json_file.write(latest_data_jsonify.get_data(as_text=True))
+
+    # Call the generate_dummy function
+    generate_dummy.generate_dummy()   
+
+    # Inside your route function
+    return redirect(url_for('influencer'))
+
+def get_influencer_latest():
+    # Aggregate to get the latest statistic for each document
+    pipeline = [
+        {"$unwind": "$statistic"},
+        {"$sort": {"statistic.dateRetrieve": -1}},
+        {"$group": {
+            "_id": "$_id",
+            "username": {"$first": "$username"},
+            "nickname": {"$first": "$nickname"},
+            "avatar": {"$first": "$avatar"},
+            "statistic": {"$first": "$statistic"}
+        }},
+        {"$project": {
+            "_id": {"$toString": "$_id"},
+            "username": 1,
+            "nickname": 1,
+            "avatar": 1,
+            "statistic": 1
+        }}
+    ]
+
+    cursor = collection_influencer.aggregate(pipeline)
+
+    # Convert the cursor to a list of documents
+    latest_data = list(cursor)
+
+    return latest_data
+
+    # # Iterate through the cursor to print or process the results
+    # for document in cursor:
+    #     print(f"Latest data for {document['username']}: {document}")
+
+def job():
+    print("Hello, this is my scheduled job!")
+
+scheduler = BackgroundScheduler()
+scheduler.add_job(job, trigger="cron", hour=14, minute=56)
+scheduler.start()
 
 if __name__ == '__main__':
     app.run(debug=True)

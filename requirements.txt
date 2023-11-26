@@ -5,3 +5,4 @@ Flask-Bcrypt
 scikit-learn
 matplotlib
 numpy
+apscheduler
