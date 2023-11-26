@@ -31,7 +31,7 @@
         <div class="card">
           <div class="card-body">
             <h4 class="card-title">Influencer</h4>
-            <h6 class="mb-4">Latest Retrieve: 19 Oktober 2023 <button type="button" class="btn btn-sm btn-gradient-info btn-rounded ml-2 ">Sync now</button></h6>
+            <h6 class="mb-4">Latest Retrieve: {{date_retrieve}} <a href="{{ url_for('sync_influencer') }}" class="btn btn-sm btn-gradient-info btn-rounded ml-2">Sync now</a></h6>
             <div class="table-responsive">
               <table id="influencersTable" class="table">
                 <thead>
@@ -61,22 +61,86 @@
                         {{ influencer.username }}
                     </td>
                     <td>
-                        {{ influencer.statistic[-1].followerCount | format_number }}
+                        {{ influencer.statistic[-1].followerCount | format_number }} 
+                        {% set initial_followers = influencer.statistic[-2].followerCount %}
+                        {% set growth = influencer.statistic[-1].followerCount - initial_followers %}
+                        {% set percentage_growth = (growth / initial_followers) * 100 %}
+                        <br/>
+                        <span class="{{ 'text-success' if growth >= 0 else 'text-danger' }}">
+                          {% if growth >= 0 %}
+                              +
+                          {% else %}
+                              -
+                          {% endif %}
+                          {{ percentage_growth | round(2) }}%
+                      </span>
                     </td>
                     <td>
                         {{ influencer.statistic[-1].heartCount | format_number }}
+                        {% set initial_heart = influencer.statistic[-2].heartCount %}
+                        {% set growth = influencer.statistic[-1].heartCount - initial_heart %}
+                        {% set percentage_growth = (growth / initial_heart) * 100 %}
+                        <br/>
+                        <span class="{{ 'text-success' if growth >= 0 else 'text-danger' }}">
+                          {% if growth >= 0 %}
+                              +
+                          {% else %}
+                              -
+                          {% endif %}
+                          {{ percentage_growth | round(2) }}%
                     </td>
                     <td>
                         {{ influencer.statistic[-1].totalPlayCount | format_number }}
+                        {% set initial_play = influencer.statistic[-2].totalPlayCount %}
+                        {% set growth = influencer.statistic[-1].totalPlayCount - initial_play %}
+                        {% set percentage_growth = (growth / initial_play) * 100 %}
+                        <br/>
+                        <span class="{{ 'text-success' if growth >= 0 else 'text-danger' }}">
+                          {% if growth >= 0 %}
+                              +
+                          {% else %}
+                              -
+                          {% endif %}
+                          {{ percentage_growth | round(2) }}%
                     </td>
                     <td>
                         {{ influencer.statistic[-1].totalCommentCount | format_number }}
+                        {% set initial_comment = influencer.statistic[-2].totalCommentCount %}
+                        {% set growth = influencer.statistic[-1].totalCommentCount - initial_comment %}
+                        {% set percentage_growth = (growth / initial_comment) * 100 %}
+                        <br/>
+                        <span class="{{ 'text-success' if growth >= 0 else 'text-danger' }}">
+                          {% if growth >= 0 %}
+                              +
+                          {% else %}
+                              -
+                          {% endif %}
+                          {{ percentage_growth | round(2) }}%
                     </td>
                     <td>
                         {{ influencer.statistic[-1].totalShareCount | format_number }}
+                        {% set initial_Share = influencer.statistic[-2].totalShareCount %}
+                        {% set growth = influencer.statistic[-1].totalShareCount - initial_Share %}
+                        {% set percentage_growth = (growth / initial_Share) * 100 %}
+                        <br/>
+                        <span class="{{ 'text-success' if growth >= 0 else 'text-danger' }}">
+                          {% if growth >= 0 %}
+                              +
+                          {% else %}
+                              -
+                          {% endif %}
+                          {{ percentage_growth | round(2) }}%
                     </td>
                     <td>
                         {{ influencer.statistic[-1].engagementRate | format_percentage }}
+                        {% set initial_engagement = influencer.statistic[-2].engagementRate %}
+                        {% set growth = influencer.statistic[-1].engagementRate - initial_engagement %}
+                        <br/>
+                        <span class="{{ 'text-success' if growth >= 0 else 'text-danger' }}">
+                          {% if growth >= 0 %}
+                              +
+                          {% endif %}
+                          {{ growth | round(2) }}
                     </td>
                     <td>
                         <a href="{{ url_for('prediksi_influencer', influencer_id=influencer._id, lastPage='influencer' ) }}" class="btn btn-sm btn-gradient-primary btn-rounded">Detail</a>
