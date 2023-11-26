@@ -86,7 +86,7 @@ def login_process():
     else:
         print("Login failed")
         # If the user doesn't exist or the password is incorrect, show an error
-        return render_template('/', error='Invalid credentials')
+        return redirect(url_for('login'))
 
 @app.route('/logout')
 def logout():
