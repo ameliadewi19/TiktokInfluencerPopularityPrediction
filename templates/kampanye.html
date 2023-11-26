@@ -54,22 +54,26 @@
                 </thead>
                 <tbody>
                   {% for campaign in campaigns %}
-                  <tr>
-                    <td>{{ loop.index }}</td>
-                    <td>{{ campaign.namaCampaign }}</td>
-                    <td>{{ campaign['videoCount'] }}</td>
-                    <td>
-                      <a href="{{ url_for('detail_kampanye', campaign_id=campaign._id) }}" class="btn btn-sm btn-gradient-primary btn-rounded justify-content-center">Detail</a>
-                    </td>
-                    <td>
-                      <button type="button" class="btn btn-sm btn-gradient-info" data-toggle="modal" data-target="#editModal">
-                        <i class="mdi mdi-pencil"></i>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-gradient-danger" data-toggle="modal" data-target="#deleteModal">
-                        <i class="mdi mdi-delete"></i>
-                      </button>
-                    </td>
-                  </tr>
+                    <tr>
+                      <td>{{ loop.index }}</td>
+                      <td>{{ campaign.namaCampaign }}</td>
+                      <td>{{ campaign['videoCount'] }}</td>
+                      <td>
+                        <a href="{{ url_for('detail_kampanye', campaign_id=campaign.id) }}" class="btn btn-sm btn-gradient-primary btn-rounded justify-content-center">Detail</a>
+                      </td>
+                      <td>
+                        <button class="btn btn-sm btn-gradient-info" data-toggle="modal" data-target="#editKampanye{{ campaign.id }}">
+                          <i class="mdi mdi-pencil text-white"></i>
+                        </button>
+                        {% from 'edit_kampanye.html' import render_edit_kampanye %}
+                          {{ render_edit_kampanye(campaign) }}
+                        <button type="button" class="btn btn-sm btn-gradient-danger" data-toggle="modal" data-target="#deleteKampanye{{ campaign.id }}">
+                          <i class="mdi mdi-delete text-white"></i>
+                        </button>
+                        {% from 'delete_kampanye.html' import render_delete_kampanye %}
+                          {{ render_delete_kampanye(campaign) }}
+                      </td>
+                    </tr>
                   {% endfor %}
                 </tbody>
               </table>
@@ -80,7 +84,7 @@
     </div>
   </div>
 
-  {% include 'edit_modal.html' %}
-  {% include 'delete_modal.html' %}
+  {% include 'edit_kampanye.html' %}
+  {% include 'delete_kampanye.html' %}
   {% include 'add_campaign.html' %}
 {% endblock %}

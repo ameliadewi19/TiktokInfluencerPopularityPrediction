@@ -3,12 +3,12 @@
       <li class="nav-item nav-profile">
         <a href="#" class="nav-link">
           <div class="nav-profile-image">
-            <img src="{{ url_for('static', filename='images/faces/face1.jpg') }}" alt="profile">
+            <img src="{{ url_for('static', filename='images/user.png') }}" alt="profile">
             <span class="login-status online"></span> <!--change to offline or busy as needed-->              
           </div>
           <div class="nav-profile-text d-flex flex-column">
-            <span class="font-weight-bold mb-2">David Grey. H</span>
-            <span class="text-secondary text-small">Project Manager</span>
+            <span class="font-weight-bold mb-2 mt-2">Admin</span>
+            <!-- <span class="text-secondary text-small">Project Manager</span> -->
           </div>
           <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
         </a>
@@ -36,7 +36,11 @@
           <div class="border-bottom">
             <!-- <h6 class="font-weight-normal mb-3">Projects</h6>                 -->
           </div>
-          <button class="btn btn-block btn-lg btn-gradient-primary mt-4"><i class="mdi mdi-logout mr-2 text-white"></i> Logout</button>
+          <form action="{{ url_for('logout') }}" method="get">
+            <button type="submit" class="btn btn-block btn-lg btn-gradient-primary mt-4">
+                <i class="mdi mdi-logout mr-2 text-white"></i> Logout
+            </button>
+          </form>
         </span>
       </li>
     </ul>

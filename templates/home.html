@@ -43,8 +43,8 @@
                                     <table class="table">
                                         <thead class="text-center">
                                             <tr>
-                                                <th>
-                                                    Growth
+                                                <th style="width: 50px;">
+                                                    Engagement Growth
                                                 </th>
                                                 <th colspan="2">
                                                     Username
@@ -86,7 +86,7 @@
                                                     {% endif %}
                                                 </td>
                                                 <td>
-                                                    <img src="{{ influencer.avatar }}" class="mr-2" alt="image">
+                                                    <img src="{{ url_for('static', filename='avatar/' + influencer.username + '_avatar.jpg') }}" class="mr-2" alt="image">
                                                 </td>
                                                 <td class="text-left">
                                                     {{ influencer.username }}

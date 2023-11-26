@@ -18,12 +18,12 @@
         </ul>
       </nav>
     </div>
-    <div class="input-group mb-4" style="width: 300px;">
+    <!-- <div class="input-group mb-4" style="width: 300px;">
         <div class="input-group-prepend">
           <span class="input-group-text bg-white text-primary" style="border-bottom-left-radius: 20px; border-top-left-radius: 20px;"><i class="mdi mdi-magnify"></i></span>
         </div>
         <input type="text" class="form-control" aria-label="" placeholder="Masukan username influencer" style="border-bottom-right-radius: 20px; border-top-right-radius: 20px;">
-      </div>
+      </div> -->
     <div class="row">
     </div>
     <div class="row">
@@ -31,9 +31,9 @@
         <div class="card">
           <div class="card-body">
             <h4 class="card-title">Influencer</h4>
-            <h6 class="mb-4">Latest Retrieve: 19 Oktober 2023</h6>
+            <h6 class="mb-4">Latest Retrieve: {{date_retrieve}} <a href="{{ url_for('sync_influencer') }}" class="btn btn-sm btn-gradient-info btn-rounded ml-2">Sync now</a></h6>
             <div class="table-responsive">
-              <table class="table">
+              <table id="influencersTable" class="table">
                 <thead>
                   <tr>
                     <th>No.</th>
@@ -55,25 +55,81 @@
                         {{loop.index}}
                     </td>
                     <td>
-                      <img src="{{ url_for('static', filename='images/faces/face1.jpg') }}" class="mr-2" alt="image">
+                      <img src="{{ url_for('static', filename='avatar/' + influencer.username + '_avatar.jpg') }}" class="mr-2" alt="image">
                     </td>
                     <td>
                         {{ influencer.username }}
                     </td>
                     <td>
-                        {{ influencer.statistic[-1].followerCount | format_number }}
+                        {{ influencer.statistic[-1].followerCount | format_number }} 
+                        {% set initial_followers = influencer.statistic[-2].followerCount %}
+                        {% set growth = influencer.statistic[-1].followerCount - initial_followers %}
+                        {% set percentage_growth = (growth / initial_followers) * 100 %}
+                        <br/>
+                        <span class="{{ 'text-success' if growth >= 0 else 'text-danger' }}">
+                          {% if growth >= 0 %}
+                              +
+                          {% else %}
+                              -
+                          {% endif %}
+                          {{ percentage_growth | round(2) }}%
+                      </span>
                     </td>
                     <td>
                         {{ influencer.statistic[-1].heartCount | format_number }}
+                        {% set initial_heart = influencer.statistic[-2].heartCount %}
+                        {% set growth = influencer.statistic[-1].heartCount - initial_heart %}
+                        {% set percentage_growth = (growth / initial_heart) * 100 %}
+                        <br/>
+                        <span class="{{ 'text-success' if growth >= 0 else 'text-danger' }}">
+                          {% if growth >= 0 %}
+                              +
+                          {% else %}
+                              -
+                          {% endif %}
+                          {{ percentage_growth | round(2) }}%
                     </td>
                     <td>
                         {{ influencer.statistic[-1].totalPlayCount | format_number }}
+                        {% set initial_play = influencer.statistic[-2].totalPlayCount %}
+                        {% set growth = influencer.statistic[-1].totalPlayCount - initial_play %}
+                        {% set percentage_growth = (growth / initial_play) * 100 %}
+                        <br/>
+                        <span class="{{ 'text-success' if growth >= 0 else 'text-danger' }}">
+                          {% if growth >= 0 %}
+                              +
+                          {% else %}
+                              -
+                          {% endif %}
+                          {{ percentage_growth | round(2) }}%
                     </td>
                     <td>
                         {{ influencer.statistic[-1].totalCommentCount | format_number }}
+                        {% set initial_comment = influencer.statistic[-2].totalCommentCount %}
+                        {% set growth = influencer.statistic[-1].totalCommentCount - initial_comment %}
+                        {% set percentage_growth = (growth / initial_comment) * 100 %}
+                        <br/>
+                        <span class="{{ 'text-success' if growth >= 0 else 'text-danger' }}">
+                          {% if growth >= 0 %}
+                              +
+                          {% else %}
+                              -
+                          {% endif %}
+                          {{ percentage_growth | round(2) }}%
                     </td>
                     <td>
                         {{ influencer.statistic[-1].totalShareCount | format_number }}
+                        {% set initial_Share = influencer.statistic[-2].totalShareCount %}
+                        {% set growth = influencer.statistic[-1].totalShareCount - initial_Share %}
+                        {% set percentage_growth = (growth / initial_Share) * 100 %}
+                        <br/>
+                        <span class="{{ 'text-success' if growth >= 0 else 'text-danger' }}">
+                          {% if growth >= 0 %}
+                              +
+                          {% else %}
+                              -
+                          {% endif %}
+                          {{ percentage_growth | round(2) }}%
                     </td>
                     <td>
                         {{ influencer.statistic[-1].engagementRate | format_percentage }}
@@ -100,4 +156,22 @@
       </div>
     </div>
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      let table = new DataTable('#influencersTable', {
+        sortable: true, // Enable sorting
+        perPage: 10, // Adjust the number of rows per page as needed
+        sort: [8, 'desc'], // Sort by the 9th column (index 8) in descending order ('desc')
+      });
+    });
+
+    // document.addEventListener('DOMContentLoaded', function () {
+    // let table = new DataTable('#influencersTable', {
+    //         dom: 'Bfrtip',
+    //         buttons: [
+    //             'copy', 'csv', 'excel', 'print', 'pdf'
+    //         ]
+    //     });
+    // });  
+  </script>  
 {% endblock %}
