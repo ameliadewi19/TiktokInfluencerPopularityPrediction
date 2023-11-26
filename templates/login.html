@@ -8,9 +8,17 @@
         <div class="row w-100">
           <div class="col-lg-6 mx-auto">
             <div class="auth-form-light text-left p-5">
-              <div class="brand-logo">
-                <img src="{{ url_for('static', filename='images/logo.svg') }}">
+              <!-- <h3 class="brand-logo text-primary" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" style="width: auto; height: 50px;">
+                Your Influensah
+              </h3> -->
+              <div class="brand-logo text-center">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" style="width: auto; height: 125px;">
+                <h3 class="text-primary" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;">
+                  Your Influensah
+                </h3>
               </div>
+              
               <h4>Hello! let's get started</h4>
               <h6 class="font-weight-light">Sign in to continue.</h6>
               <form class="pt-3" method="POST" action="{{ url_for('login_process') }}">
