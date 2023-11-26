@@ -77,6 +77,14 @@
                     </td>
                     <td>
                         {{ influencer.statistic[-1].engagementRate | format_percentage }}
+                        {% set initial_engagement = influencer.statistic[-2].engagementRate %}
+                        {% set growth = influencer.statistic[-1].engagementRate - initial_engagement %}
+                        <br/>
+                        <span class="{{ 'text-success' if growth >= 0 else 'text-danger' }}">
+                          {% if growth >= 0 %}
+                              +
+                          {% endif %}
+                          {{ growth | round(3) }}
                     </td>
                     <td>
                         <a href="{{ url_for('prediksi_influencer', influencer_id=influencer._id, lastPage='influencer' ) }}" class="btn btn-sm btn-gradient-primary btn-rounded">Detail</a>
