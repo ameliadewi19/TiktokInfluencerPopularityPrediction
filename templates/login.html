@@ -21,6 +21,15 @@
                                 </button>
                             </div>
                         {% endif %}
+                        {% if request.args.get('empty_fields') %}
+                            <!-- Display Bootstrap alert for empty fields -->
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                <strong>Empty fields!</strong> Please enter both username and password.
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        {% endif %}
                         <form class="pt-3" method="POST" action="{{ url_for('login_process') }}">
                             <div class="form-group">
                                 <input type="text" name="username" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username">
