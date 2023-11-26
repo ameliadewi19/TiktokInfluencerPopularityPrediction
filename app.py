@@ -71,7 +71,9 @@ def login_process():
     username = request.form['username']
     password = request.form['password']
 
-    print("Tesss")
+    if not username or not password:
+        # If username or password is empty, redirect with an empty_fields parameter
+        return redirect(url_for('login', empty_fields=True))
 
     # Query the database for the user with the provided username
     user_data = collection_user.find_one({'username': username})
@@ -86,7 +88,7 @@ def login_process():
     else:
         print("Login failed")
         # If the user doesn't exist or the password is incorrect, show an error
-        return redirect(url_for('login'))
+        return redirect(url_for('login', login_error=True))
 
 @app.route('/logout')
 def logout():
