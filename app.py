@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, make_response, session, redirect, url_for
+from flask import Flask, render_template, request, make_response, session, redirect, url_for, flash, get_flashed_messages
 from bson import ObjectId
 from pymongo import MongoClient
 from functools import wraps, update_wrapper
@@ -6,6 +6,7 @@ from datetime import datetime
 from flask_bcrypt import Bcrypt
 import secrets
 import json
+from sync_video import sync_video
 
 app = Flask(__name__)
 bcrypt = Bcrypt(app)
@@ -92,7 +93,7 @@ def logout():
 
 @app.route("/home")
 @nocache
-@login_required
+# @login_required
 def home():
     print("Session in home route:", session)
     total_influencer_data = collection_influencer.count_documents({})
@@ -104,7 +105,7 @@ def home():
 
 @app.route("/influencer")
 @nocache
-@login_required
+# @login_required
 def influencer():
     # Mengambil data influencer dari MongoDB dan mengurutkannya berdasarkan engagement rate
     influencers_data = collection_influencer.find().sort("statistic.engagementRate", -1)
@@ -189,29 +190,38 @@ def prediksi_influencer():
 
 @app.route("/kampanye")
 @nocache
-@login_required
+# @login_required
 def kampanye():
     campaigns_data = collection_campaign.find()
 
     # Create a list to store campaign details with video count
     campaigns = []
+    campaign_ids = []  # Initialize an empty list to store campaign IDs
 
     # Calculate the count for each campaign
     for campaign_data in campaigns_data:
         campaign_name = campaign_data.get('namaCampaign', '')
         video_count = len(campaign_data.get('video', []))
         id = campaign_data.get('_id', '')
+
+        # Append campaign details to the campaigns list
         campaigns.append({
             'namaCampaign': campaign_name,
             'videoCount': video_count,
             'id': id,
         })
 
-    return render_template("kampanye.html", campaigns=campaigns)
+        # Append campaign ID to the campaign_ids list
+        campaign_ids.append(id)
+    
+    flash_messages = get_flashed_messages(with_categories=True)
+
+    return render_template("kampanye.html", campaigns=campaigns, campaign_ids=campaign_ids)
+
 
 @app.route("/detail_kampanye")
 @nocache
-@login_required
+# @login_required
 def detail_kampanye():
     campaign_id = request.args.get('campaign_id')
 
@@ -225,12 +235,21 @@ def detail_kampanye():
     # Cari campaign berdasarkan ID
     campaign_data = collection_campaign.find_one({"_id": campaign_id})
 
-    if campaign_data:
-        # Render template dengan data campaign yang ditemukan
-        return render_template("detail_kampanye.html", campaign=campaign_data)
-    else:
-        # Handle kasus ketika campaign tidak ditemukan
-        return render_template("error.html", message="Campaign not found")
+    formatted_date = '-'  # Default value for formatted_date
+
+    if campaign_data and 'video' in campaign_data and campaign_data['video']:
+
+        date_retrieve = campaign_data['video'][0].get('dateRetrieve', None)
+
+        # Check if date_retrieve is not None and not an empty string
+        if date_retrieve:
+            date_retrieve_datetime = datetime.strptime(date_retrieve, '%Y-%m-%d %H:%M:%S')
+            formatted_date = date_retrieve_datetime.strftime('%A, %d %B %Y')
+
+    flash_messages = get_flashed_messages(with_categories=True)
+
+    return render_template("detail_kampanye.html", campaign=campaign_data, formatted_date=formatted_date)
+
 
 @app.route('/save_posts', methods=['POST'])
 @nocache
@@ -249,22 +268,50 @@ def save_posts():
         try:
             collection_campaign.update_one(
                 {"_id": campaign_id},
-                {"$set": {"video": [{"video_url": url} for url in video_urls]}}
+                {"$push": {"video": {"$each": [{"video_url": url} for url in video_urls]}}}
             )
+
+            # Get count of videos before the update
+            campaign_data_before = collection_campaign.find_one({"_id": campaign_id})
+            countbefore = len(campaign_data_before.get('video', []))
+
+            sync_video_route()
+
+            # Get count of videos after the update
+            campaign_data_after = collection_campaign.find_one({"_id": campaign_id})
+            countafter = len(campaign_data_after.get('video', []))
+
+            if countbefore != countafter:
+                # If counts are different, show a flash message
+                flash("Failed to retrieve data for new URLs.", "error")
 
             return redirect(url_for('detail_kampanye', campaign_id=campaign_id))
 
         except Exception as e:
             print(f"Error updating campaign: {e}")
-            return render_template("error.html", message="Error updating campaign")
+            flash("Error updating campaign", "error")
+            return redirect(url_for('detail_kampanye', campaign_id=campaign_id))
+
+
+        
 
 @app.route('/add_campaign', methods=['POST'])
 def add_campaign():
     if request.method == 'POST':
         name = request.form.get('addCampaignName')
 
-        # Simpan ke database MongoDB
-        collection_campaign.insert_one({'namaCampaign': name})  # Tambahkan videoCount sesuai kebutuhan
+        # Ambil idCampaign terakhir dari database
+        last_campaign = collection_campaign.find_one(sort=[("idCampaign", -1)])
+        if last_campaign:
+            last_id = last_campaign['idCampaign']
+        else:
+            last_id = 0
+
+        # Tambahkan 1 untuk mendapatkan idCampaign baru
+        new_id = last_id + 1
+
+        # Simpan ke database MongoDB dengan idCampaign yang baru
+        collection_campaign.insert_one({'idCampaign': new_id, 'namaCampaign': name})
 
     return redirect(url_for('kampanye'))
 
@@ -294,6 +341,7 @@ def edit_kampanye():
         except Exception as e:
             print(f"Error editing campaign")
             return redirect(url_for('kampanye'))
+
 
 @app.route("/edit_video", methods=["POST"])
 @nocache
@@ -352,6 +400,74 @@ def delete_video():
     except Exception as e:
         print(f"Error deleting video: {e}")
         return redirect(url_for('detail_kampanye', campaign_id=campaign_id))
+
+@app.route('/sync_video')
+@nocache
+def sync_video_route():
+    campaign_id = request.args.get('campaign_id')
+
+    try:
+        campaign_id = ObjectId(campaign_id)
+    except Exception as e:
+        print(f"Error converting campaign_id to ObjectId: {e}")
+        return render_template("error.html", message="Invalid Campaign ID")
+
+    try:
+        # Get the existing campaign data before the sync
+        campaign_data_before = collection_campaign.find_one({"_id": campaign_id})
+        
+        # Store the count before the sync
+        countbefore = len(campaign_data_before.get('video', []))
+
+        # Attempt to sync the video data
+        try:
+            sync_video(campaign_data_before, collection_campaign)
+        except Exception as sync_error:
+            print(f"Error during sync_video: {sync_error}")
+
+            flash("There was an error during video sync.", "warning")
+            
+            # Redirect to the campaign details page
+            return redirect(url_for('detail_kampanye', campaign_id=campaign_id))
+
+        # Get the campaign data after the sync
+        campaign_data_after = collection_campaign.find_one({"_id": campaign_id})
+        
+        # Store the count after the sync
+        countafter = len(campaign_data_after.get('video', []))
+
+        # Check if the video count changed
+        if countbefore != countafter:
+            flash("There was an error with some URLs.", "error")
+
+        # Redirect to the campaign details page
+        return redirect(url_for('detail_kampanye', campaign_id=campaign_id))
+
+    except Exception as e:
+        print(f"Error updating campaign: {e}")
+        flash("Error updating campaign", "error")
+        return redirect(url_for('detail_kampanye', campaign_id=campaign_id))
+
+
+
+@app.route('/sync_campaign')
+@nocache
+def sync_campaign():
+    campaign_ids = request.args.getlist('campaign_ids')
+
+    for campaign_id in campaign_ids:
+        try:
+            campaign_id_obj = ObjectId(campaign_id)
+        except Exception as e:
+            print(f"Error converting campaign_id to ObjectId: {e}")
+            return render_template("error.html", message="Invalid Campaign ID")
+
+        campaign_data = collection_campaign.find_one({"_id": campaign_id_obj})
+        sync_video(campaign_data, collection_campaign)
+
+    return redirect(url_for('kampanye'))
+
+    
 
 if __name__ == '__main__':
     app.run(debug=True)
