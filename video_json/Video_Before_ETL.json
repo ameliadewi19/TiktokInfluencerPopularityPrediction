@@ -1,1 +1,631 @@
-[]
+[
+  {
+    "status": "success",
+    "result": {
+      "type": "video",
+      "id": "6939495914104966401",
+      "createTime": 1615727302,
+      "description": "All Outfit’s is from : @colorboxindonesia #colorboxindonesia #CBBesties #fyp",
+      "hashtag": [
+        "colorboxindonesia",
+        "cbbesties",
+        "fyp"
+      ],
+      "duration": "0:00",
+      "author": {
+        "uid": "6786950130899239937",
+        "username": "thsaurus",
+        "nickname": "Tsa",
+        "signature": "ig : @thsabrnita \nim more active there🫶🏼",
+        "region": "ID",
+        "avatarThumb": [
+          "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/5a413437f4c41c4cbe334b6669b2e416~c5_100x100.webp?x-expires=1701180000&x-signature=OgtLWahKREmu7DsypKKYK0kNAag%3D",
+          "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/5a413437f4c41c4cbe334b6669b2e416~c5_100x100.jpeg?x-expires=1701180000&x-signature=SxfHy8udGFcN5A6uoEdR4xnChOs%3D"
+        ],
+        "avatarMedium": [
+          "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/5a413437f4c41c4cbe334b6669b2e416~c5_720x720.webp?x-expires=1701180000&x-signature=mzrLGhIpKoW5k%2BME4GzEzxnk1OQ%3D",
+          "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/5a413437f4c41c4cbe334b6669b2e416~c5_720x720.jpeg?x-expires=1701180000&x-signature=VAsff92rdKlx8CJlB4H%2FWZl5ogk%3D"
+        ],
+        "url": "https://www.tiktok.com/@thsaurus"
+      },
+      "statistics": {
+        "playCount": 328179,
+        "downloadCount": 838,
+        "shareCount": 358,
+        "commentCount": 143,
+        "likeCount": 37511,
+        "favoriteCount": 2813,
+        "forwardCount": 0,
+        "whatsappShareCount": 52,
+        "loseCount": 0,
+        "loseCommentCount": 0
+      },
+      "video": [
+        "https://v3.tiktokcdn.com/67d7a1c6b2ad1939e8a483008eb1c9d4/6564feb8/video/tos/alisg/tos-alisg-pve-0037/031f4ea8ca6e48b8b0fff0287d3e64c4/?a=1180&ch=0&cr=13&dr=0&lr=all&cd=0%7C0%7C0%7C&cv=1&br=1910&bt=955&bti=OHYpOTY0Zik7OzlmOm01MzE6ZC4xMDo%3D&cs=0&ds=6&ft=TirtJ1t7vSaQ9EMbgGiG.6C~JXePXmApmZyOx86BJE&mime_type=video_mp4&qs=0&rc=ODllOTs7aTw8NTk8OjM5aEBpMzVnZnFzeWozNDMzZDgzM0AzLzYtLjBeNTIxLTFeNjM0YSNgczAwLWheaTRgLS1eLzRzcw%3D%3D&l=202311271440080E90FFC7E5484D17C796&btag=e00088000&cc=6",
+        "https://v53.tiktokcdn.com/ca92ef283c0e43f992f6df6471267226/6564feb8/video/tos/alisg/tos-alisg-pve-0037/031f4ea8ca6e48b8b0fff0287d3e64c4/?a=1180&ch=0&cr=13&dr=0&lr=all&cd=0%7C0%7C0%7C&cv=1&br=1910&bt=955&bti=OHYpOTY0Zik7OzlmOm01MzE6ZC4xMDo%3D&cs=0&ds=6&ft=TirtJ1t7vSaQ9EMbgGiG.6C~JXePXmApmZyOx86BJE&mime_type=video_mp4&qs=0&rc=ODllOTs7aTw8NTk8OjM5aEBpMzVnZnFzeWozNDMzZDgzM0AzLzYtLjBeNTIxLTFeNjM0YSNgczAwLWheaTRgLS1eLzRzcw%3D%3D&l=202311271440080E90FFC7E5484D17C796&btag=e00088000&cc=17",
+        "https://api-h2.tiktokv.com/aweme/v1/play/?video_id=v07025aa0000c170lgavkp0n3c3dv2c0&line=0&is_play_url=1&source=PackSourceEnum_FEED&file_id=7e6690a74906425989af3818069b2665&item_id=6939495914104966401&signaturev3=dmlkZW9faWQ7ZmlsZV9pZDtpdGVtX2lkLmZlNmVlYzdhMTEyMjY0ZTUwNmM4Yjg1NjEwOTg3YjA0"
+      ],
+      "cover": [
+        "https://p16-sign-sg.tiktokcdn.com/large/tos-alisg-p-0037/6f0f1df2fb3d46568f31f4f50241af4e.webp?x-expires=1701180000&x-signature=PyRpDwT%2BnYlHe497Q2MPA%2BFlcVU%3D&s=FEED&se=false&sh=&sc=cover&l=202311271440080E90FFC7E5484D17C796",
+        "https://p16-sign-sg.tiktokcdn.com/large/tos-alisg-p-0037/6f0f1df2fb3d46568f31f4f50241af4e.jpeg?x-expires=1701180000&x-signature=v8JH%2BYbcDcdk209eP%2Fa0kAnZaUw%3D&s=FEED&se=false&sh=&sc=cover&l=202311271440080E90FFC7E5484D17C796"
+      ],
+      "dynamicCover": [
+        "https://p16-sign-sg.tiktokcdn.com/obj/tos-alisg-p-0037/212450e7b4b847fd99a82897dee269e0_1615727305?x-expires=1701180000&x-signature=VOcJUOm04T8IiK6vEMcrDAp2%2BuA%3D&s=FEED&se=false&sh=&sc=dynamic_cover&l=202311271440080E90FFC7E5484D17C796"
+      ],
+      "originCover": [
+        "https://p16-sign-sg.tiktokcdn.com/tos-alisg-p-0037/cb469aaadad840efbc8dfb8f5d3aca7a_1615727305~tplv-tiktokx-360p.webp?x-expires=1701180000&x-signature=Ju3fyFGINu6mq69cmGKoBSlDPi0%3D&s=FEED&se=false&sh=&sc=feed_cover&l=202311271440080E90FFC7E5484D17C796",
+        "https://p16-sign-sg.tiktokcdn.com/tos-alisg-p-0037/cb469aaadad840efbc8dfb8f5d3aca7a_1615727305~tplv-tiktokx-360p.jpeg?x-expires=1701180000&x-signature=9CWfGwS42H%2FGS6bvTgBy6lDzL%2FU%3D&s=FEED&se=false&sh=&sc=feed_cover&l=202311271440080E90FFC7E5484D17C796"
+      ],
+      "music": {
+        "id": 6922356027585269000,
+        "title": "Renai Circulation (English Cover) [2012 TV Size]",
+        "author": "Lizz Robinett",
+        "album": "Renai Circulation (English Cover) [TV Size]",
+        "playUrl": [
+          "https://sf16-ies-music-sg.tiktokcdn.com/obj/tos-alisg-ve-2774/oALS3CrueQIMChUjVdftBBgztz3pZ5ITZzzDtq"
+        ],
+        "coverLarge": [
+          "https://p16-sg.tiktokcdn.com/aweme/720x720/tos-alisg-v-2774/8f927fb1e486433f870c1577f928a314.jpeg"
+        ],
+        "coverMedium": [
+          "https://p16-sg.tiktokcdn.com/aweme/200x200/tos-alisg-v-2774/8f927fb1e486433f870c1577f928a314.jpeg"
+        ],
+        "coverThumb": [
+          "https://p16-sg.tiktokcdn.com/aweme/100x100/tos-alisg-v-2774/8f927fb1e486433f870c1577f928a314.jpeg"
+        ],
+        "duration": 35
+      }
+    }
+  },
+  {
+    "status": "success",
+    "result": {
+      "type": "video",
+      "id": "6942057868904369410",
+      "createTime": 1616323805,
+      "description": "Kalian paling suka yang mana?💗✨ @colorboxindonesia #colorboxindonesia #CBBesties",
+      "hashtag": [
+        "colorboxindonesia",
+        "cbbesties"
+      ],
+      "duration": "0:00",
+      "author": {
+        "uid": "6531499793901453313",
+        "username": "angelinesentosa",
+        "nickname": "Angel 🫧",
+        "signature": "ig : angelinesentosa\nclick the link below for business inq ♡",
+        "region": "ID",
+        "avatarThumb": [
+          "https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/b5714e7dfeed74bc4776d308e848c5db~c5_100x100.webp?x-expires=1701180000&x-signature=FoT7UhVTmZu2vSszdQMi760V%2Bxk%3D",
+          "https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/b5714e7dfeed74bc4776d308e848c5db~c5_100x100.jpeg?x-expires=1701180000&x-signature=U1ww99LlusX7GDWLelCjRlZ9rmI%3D"
+        ],
+        "avatarMedium": [
+          "https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/b5714e7dfeed74bc4776d308e848c5db~c5_720x720.webp?x-expires=1701180000&x-signature=rQ3TC0Be1h%2ButQamZ%2FXLZNINk1M%3D",
+          "https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/b5714e7dfeed74bc4776d308e848c5db~c5_720x720.jpeg?x-expires=1701180000&x-signature=SqHglRMWFyaYQxI9l7sRCKj3nq8%3D"
+        ],
+        "url": "https://www.tiktok.com/@angelinesentosa"
+      },
+      "statistics": {
+        "playCount": 1414887,
+        "downloadCount": 167,
+        "shareCount": 89,
+        "commentCount": 371,
+        "likeCount": 29392,
+        "favoriteCount": 588,
+        "forwardCount": 0,
+        "whatsappShareCount": 17,
+        "loseCount": 0,
+        "loseCommentCount": 0
+      },
+      "video": [
+        "https://v3.tiktokcdn.com/70e731dedb660aed854acefcd45c9a53/6564febb/video/tos/alisg/tos-alisg-pve-0037/9fe7b1f9011448ed863ed76a2870b8dc/?a=1180&ch=0&cr=13&dr=0&lr=all&cd=0%7C0%7C0%7C&cv=1&br=2210&bt=1105&bti=Ozk3QGo4dik7OzlmMzAuYCM6bS4xMDo%3D&cs=0&ds=6&ft=TirtJ1t7vSaQ9EMbgGiG.6C~yXePXmApmZyOx86BJE&mime_type=video_mp4&qs=0&rc=aTc5Zzo7OGUzNzc5ZDo5ZkBpajY2dTlrNnBsNDMzOjgzM0AvYjAwYzE2X14xNTUyLV5gYSNtbGQ0cjU1Nl9gLS1iLzRzcw%3D%3D&l=20231127144010610D47CF723CC5107CEC&btag=e00088000&cc=6",
+        "https://v16.tiktokcdn.com/d44159ac7f7fed819e0de87a7e3a66c1/6564febb/video/tos/alisg/tos-alisg-pve-0037/9fe7b1f9011448ed863ed76a2870b8dc/?a=1180&ch=0&cr=13&dr=0&lr=all&cd=0%7C0%7C0%7C&cv=1&br=2210&bt=1105&bti=Ozk3QGo4dik7OzlmMzAuYCM6bS4xMDo%3D&cs=0&ds=6&ft=TirtJ1t7vSaQ9EMbgGiG.6C~yXePXmApmZyOx86BJE&mime_type=video_mp4&qs=0&rc=aTc5Zzo7OGUzNzc5ZDo5ZkBpajY2dTlrNnBsNDMzOjgzM0AvYjAwYzE2X14xNTUyLV5gYSNtbGQ0cjU1Nl9gLS1iLzRzcw%3D%3D&l=20231127144010610D47CF723CC5107CEC&btag=e00088000&cc=2",
+        "https://api-h2.tiktokv.com/aweme/v1/play/?video_id=v07025e70000c1bi9m838hu67rg3o3pg&line=0&is_play_url=1&source=PackSourceEnum_FEED&file_id=cca6075a868444a0bb9548f73d36e42f&item_id=6942057868904369410&signaturev3=dmlkZW9faWQ7ZmlsZV9pZDtpdGVtX2lkLmM1OTlhZDM1ZTFiMTVhODk3YzY5Y2IxNzg2OGMwODVl"
+      ],
+      "cover": [
+        "https://p16-sign-sg.tiktokcdn.com/large/tos-alisg-p-0037/cc7f407e41fa4703b6e53a94b8adb952.webp?x-expires=1701180000&x-signature=OFhNC8r4%2B9dWs09MUhMcWhrcMhM%3D&s=FEED&se=false&sh=&sc=cover&l=20231127144010610D47CF723CC5107CEC",
+        "https://p16-sign-sg.tiktokcdn.com/large/tos-alisg-p-0037/cc7f407e41fa4703b6e53a94b8adb952.jpeg?x-expires=1701180000&x-signature=XfN0d%2FCrywdI19AC4iFU%2F1zxlhg%3D&s=FEED&se=false&sh=&sc=cover&l=20231127144010610D47CF723CC5107CEC"
+      ],
+      "dynamicCover": [
+        "https://p16-sign-sg.tiktokcdn.com/obj/tos-alisg-p-0037/9949e5989f9b44959bc439176d877711_1616323807?x-expires=1701180000&x-signature=s4oeTihTrzu9G8C96Voo7GpUoYY%3D&s=FEED&se=false&sh=&sc=dynamic_cover&l=20231127144010610D47CF723CC5107CEC"
+      ],
+      "originCover": [
+        "https://p16-sign-sg.tiktokcdn.com/tos-alisg-p-0037/0a9924c671364df1a6ca04af406ccf9f_1616323806~tplv-tiktokx-360p.webp?x-expires=1701180000&x-signature=SYj16E9o73MFFDexrWqdoUZpFrQ%3D&s=FEED&se=false&sh=&sc=feed_cover&l=20231127144010610D47CF723CC5107CEC",
+        "https://p16-sign-sg.tiktokcdn.com/tos-alisg-p-0037/0a9924c671364df1a6ca04af406ccf9f_1616323806~tplv-tiktokx-360p.jpeg?x-expires=1701180000&x-signature=bRAXPZNdYO7nTJ3F%2B8Vl1Yst2CI%3D&s=FEED&se=false&sh=&sc=feed_cover&l=20231127144010610D47CF723CC5107CEC"
+      ],
+      "music": {
+        "id": 6922356027585269000,
+        "title": "Renai Circulation (English Cover) [2012 TV Size]",
+        "author": "Lizz Robinett",
+        "album": "Renai Circulation (English Cover) [TV Size]",
+        "playUrl": [
+          "https://sf16-ies-music-sg.tiktokcdn.com/obj/tos-alisg-ve-2774/oALS3CrueQIMChUjVdftBBgztz3pZ5ITZzzDtq"
+        ],
+        "coverLarge": [
+          "https://p16-sg.tiktokcdn.com/aweme/720x720/tos-alisg-v-2774/8f927fb1e486433f870c1577f928a314.jpeg"
+        ],
+        "coverMedium": [
+          "https://p16-sg.tiktokcdn.com/aweme/200x200/tos-alisg-v-2774/8f927fb1e486433f870c1577f928a314.jpeg"
+        ],
+        "coverThumb": [
+          "https://p16-sg.tiktokcdn.com/aweme/100x100/tos-alisg-v-2774/8f927fb1e486433f870c1577f928a314.jpeg"
+        ],
+        "duration": 35
+      }
+    }
+  },
+  {
+    "status": "success",
+    "result": {
+      "type": "video",
+      "id": "6954997314343816450",
+      "createTime": 1619336505,
+      "description": "pls help meeee harus bikin surprise yang kaya gimana🥺 @colorboxindonesia #colorboxindonesia #cbbesties",
+      "hashtag": [
+        "colorboxindonesia",
+        "cbbesties"
+      ],
+      "duration": "0:00",
+      "author": {
+        "uid": "6762329535670207490",
+        "username": "bee.lla",
+        "nickname": "byl",
+        "signature": "i like neat clothes.\nbusiness inq -> DM IG",
+        "region": "ID",
+        "avatarThumb": [
+          "https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/4e2ea265ad1cb22900419c6ea29d1052.webp?x-expires=1701180000&x-signature=XpaEr4T4AFPqi3nluRPr42vqoNk%3D",
+          "https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/4e2ea265ad1cb22900419c6ea29d1052.jpeg?x-expires=1701180000&x-signature=5we7kCXkxiroSiA3h0MtmRIt4qc%3D"
+        ],
+        "avatarMedium": [
+          "https://p16-sign-sg.tiktokcdn.com/aweme/720x720/tos-alisg-avt-0068/4e2ea265ad1cb22900419c6ea29d1052.webp?x-expires=1701180000&x-signature=tG3BCCtnXfkQjvYyFsUSlCZ5%2BQU%3D",
+          "https://p16-sign-sg.tiktokcdn.com/aweme/720x720/tos-alisg-avt-0068/4e2ea265ad1cb22900419c6ea29d1052.jpeg?x-expires=1701180000&x-signature=lJkM%2ByfhPwxJ2ZbK6Y7bEHnVR5c%3D"
+        ],
+        "url": "https://www.tiktok.com/@bee.lla"
+      },
+      "statistics": {
+        "playCount": 155726,
+        "downloadCount": 10,
+        "shareCount": 16,
+        "commentCount": 50,
+        "likeCount": 13811,
+        "favoriteCount": 511,
+        "forwardCount": 0,
+        "whatsappShareCount": 4,
+        "loseCount": 0,
+        "loseCommentCount": 0
+      },
+      "video": [
+        "https://v16.tiktokcdn.com/8ad9d5e71869c51d87243b6bb9dae350/6564fec8/video/tos/alisg/tos-alisg-pve-0037/f39ec4cd06184cf1808576496c35eb11/?a=1180&ch=0&cr=13&dr=0&lr=all&cd=0%7C0%7C0%7C&cv=1&br=1568&bt=784&bti=OHYpOTY0Zik7OzlmOm01MzE6ZC4xMDo%3D&cs=0&ds=6&ft=TirtJ1t7vSaQ9EMbgGiG.6C~DXePXmApmZyOx86BJE&mime_type=video_mp4&qs=0&rc=PDM8MzVmaGVnZThmaTQ8ZEBpM3N0OG45ajtrNTMzODgzM0BeM2A0NTZeNTExYC1eMTYyYSNnYTQ1bjNhbi9gLS1kLzRzcw%3D%3D&l=20231127144013AB5B6805C243061068E7&btag=e00088000&cc=2",
+        "https://v53.tiktokcdn.com/834507ff9d1ba813110462fa15effe22/6564fec8/video/tos/alisg/tos-alisg-pve-0037/f39ec4cd06184cf1808576496c35eb11/?a=1180&ch=0&cr=13&dr=0&lr=all&cd=0%7C0%7C0%7C&cv=1&br=1568&bt=784&bti=OHYpOTY0Zik7OzlmOm01MzE6ZC4xMDo%3D&cs=0&ds=6&ft=TirtJ1t7vSaQ9EMbgGiG.6C~DXePXmApmZyOx86BJE&mime_type=video_mp4&qs=0&rc=PDM8MzVmaGVnZThmaTQ8ZEBpM3N0OG45ajtrNTMzODgzM0BeM2A0NTZeNTExYC1eMTYyYSNnYTQ1bjNhbi9gLS1kLzRzcw%3D%3D&l=20231127144013AB5B6805C243061068E7&btag=e00088000&cc=17",
+        "https://api-h2.tiktokv.com/aweme/v1/play/?video_id=v07025g50000c22hq8dg66qk857qdpj0&line=0&is_play_url=1&source=PackSourceEnum_FEED&file_id=5a9941af0cc54b4d8bae9c8270c960a9&item_id=6954997314343816450&signaturev3=dmlkZW9faWQ7ZmlsZV9pZDtpdGVtX2lkLmQ5MWYyNWZjNGNhZTE4YjNiZjc0MjdkNGI0YTY2MWZm"
+      ],
+      "cover": [
+        "https://p16-sign-sg.tiktokcdn.com/large/tos-alisg-p-0037/dc54d36e06314e85a48a49ca8279e778.webp?x-expires=1701180000&x-signature=TDO9gv55vCcblGlytcH29%2Be7Xlo%3D&s=FEED&se=false&sh=&sc=cover&l=20231127144013AB5B6805C243061068E7",
+        "https://p16-sign-sg.tiktokcdn.com/large/tos-alisg-p-0037/dc54d36e06314e85a48a49ca8279e778.jpeg?x-expires=1701180000&x-signature=3scCgJzAKmoCE19sffGyYNfwcmQ%3D&s=FEED&se=false&sh=&sc=cover&l=20231127144013AB5B6805C243061068E7"
+      ],
+      "dynamicCover": [
+        "https://p16-sign-sg.tiktokcdn.com/obj/tos-alisg-p-0037/bc449d76d7bd4f458d71fe67b88ecd54_1619336507?x-expires=1701180000&x-signature=4KeX6Kgz6V49A6wAgROCgLhTabw%3D&s=FEED&se=false&sh=&sc=dynamic_cover&l=20231127144013AB5B6805C243061068E7"
+      ],
+      "originCover": [
+        "https://p16-sign-sg.tiktokcdn.com/tos-alisg-p-0037/98279bbf07b2429593539476058bc8bd_1619336507~tplv-tiktokx-360p.webp?x-expires=1701180000&x-signature=fAv%2BnGh%2FBGwTwgoQw6U%2FYe6NVWo%3D&s=FEED&se=false&sh=&sc=feed_cover&l=20231127144013AB5B6805C243061068E7",
+        "https://p16-sign-sg.tiktokcdn.com/tos-alisg-p-0037/98279bbf07b2429593539476058bc8bd_1619336507~tplv-tiktokx-360p.jpeg?x-expires=1701180000&x-signature=T1CZVb59CJIztXluRLTCcWT5CnU%3D&s=FEED&se=false&sh=&sc=feed_cover&l=20231127144013AB5B6805C243061068E7"
+      ],
+      "music": {
+        "id": 6723044030164240000,
+        "title": "Face To Face",
+        "author": "Ruel",
+        "album": "Face To Face",
+        "playUrl": [
+          "https://sf16-ies-music-sg.tiktokcdn.com/obj/tos-alisg-ve-2774/a6de9e0cff2d4e88ae8742085908dd13"
+        ],
+        "coverLarge": [
+          "https://p16-sg.tiktokcdn.com/aweme/720x720/tos-alisg-v-2774/e55197c7e7ad40968c07721d67f1e2e7.jpeg"
+        ],
+        "coverMedium": [
+          "https://p16-sg.tiktokcdn.com/aweme/200x200/tos-alisg-v-2774/e55197c7e7ad40968c07721d67f1e2e7.jpeg"
+        ],
+        "coverThumb": [
+          "https://p16-sg.tiktokcdn.com/aweme/100x100/tos-alisg-v-2774/e55197c7e7ad40968c07721d67f1e2e7.jpeg"
+        ],
+        "duration": 60
+      }
+    }
+  },
+  {
+    "status": "success",
+    "result": {
+      "type": "video",
+      "id": "6960276342541667585",
+      "createTime": 1620565623,
+      "description": "another styling tips with @colorboxindonesia ! #colorboxindonesia #CBBesties",
+      "hashtag": [
+        "colorboxindonesia",
+        "cbbesties"
+      ],
+      "duration": "0:00",
+      "author": {
+        "uid": "6657739689431138305",
+        "username": "dkaem_",
+        "nickname": "adinda khalista",
+        "signature": "a girl who love herself so much!\nIG : @adindaakm\nbusiness inq(line@) : @159sntfg",
+        "region": "ID",
+        "avatarThumb": [
+          "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/ea0be916fa13146963f23202d5f596d7~c5_100x100.webp?x-expires=1701180000&x-signature=7mi5kmlZxKhZC%2BfkZ7LV%2FuJPNrQ%3D",
+          "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/ea0be916fa13146963f23202d5f596d7~c5_100x100.jpeg?x-expires=1701180000&x-signature=EEBSkn%2BGn9RUIAj7ia1hPn%2FLQko%3D"
+        ],
+        "avatarMedium": [
+          "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/ea0be916fa13146963f23202d5f596d7~c5_720x720.webp?x-expires=1701180000&x-signature=1LwALqt9SG8Ho4csY31PhejvPnE%3D",
+          "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/ea0be916fa13146963f23202d5f596d7~c5_720x720.jpeg?x-expires=1701180000&x-signature=IZO20Pd51sSZGkVi0ykCHzmSSw8%3D"
+        ],
+        "url": "https://www.tiktok.com/@dkaem_"
+      },
+      "statistics": {
+        "playCount": 98388,
+        "downloadCount": 54,
+        "shareCount": 37,
+        "commentCount": 27,
+        "likeCount": 4756,
+        "favoriteCount": 379,
+        "forwardCount": 0,
+        "whatsappShareCount": 11,
+        "loseCount": 0,
+        "loseCommentCount": 0
+      },
+      "video": [
+        "https://v53.tiktokcdn.com/42482fab9ebd0fa2156e574f659bd991/6564fed7/video/tos/alisg/tos-alisg-pve-0037/8ef294c9f1c44474b06b739e8d3b8857/?a=1180&ch=0&cr=13&dr=0&lr=all&cd=0%7C0%7C0%7C&cv=1&br=2050&bt=1025&bti=OHYpOTY0Zik7OzlmOm01MzE6ZC4xMDo%3D&cs=0&ds=6&ft=TirtJ1t7vSaQ9EMbgGiG.6C~fXePXmApmZyOx86BJE&mime_type=video_mp4&qs=0&rc=ODs2ZWRlOjQ1aDdkN2dkNUBpMztmcjNwOXR3NTMzODgzM0BhLjJfX14tNi0xNS0wM2IvYSM2aGw0M2RgcF9gLS1kLzRzcw%3D%3D&l=20231127144015AB5B6805C243061069AE&btag=e00088000&cc=17",
+        "https://v16.tiktokcdn.com/a89193cfb0648274f5b115e6d40a3eb8/6564fed7/video/tos/alisg/tos-alisg-pve-0037/8ef294c9f1c44474b06b739e8d3b8857/?a=1180&ch=0&cr=13&dr=0&lr=all&cd=0%7C0%7C0%7C&cv=1&br=2050&bt=1025&bti=OHYpOTY0Zik7OzlmOm01MzE6ZC4xMDo%3D&cs=0&ds=6&ft=TirtJ1t7vSaQ9EMbgGiG.6C~fXePXmApmZyOx86BJE&mime_type=video_mp4&qs=0&rc=ODs2ZWRlOjQ1aDdkN2dkNUBpMztmcjNwOXR3NTMzODgzM0BhLjJfX14tNi0xNS0wM2IvYSM2aGw0M2RgcF9gLS1kLzRzcw%3D%3D&l=20231127144015AB5B6805C243061069AE&btag=e00088000&cc=2",
+        "https://api-h2.tiktokv.com/aweme/v1/play/?video_id=v07025g50000c2btsqc6gm607oock890&line=0&is_play_url=1&source=PackSourceEnum_FEED&file_id=22ea6d340a844e029107abbabb5318d5&item_id=6960276342541667585&signaturev3=dmlkZW9faWQ7ZmlsZV9pZDtpdGVtX2lkLmZjMzllMmFlNzNhMzkzOTBlYzNmMzY2MjQ5N2NhOTNl"
+      ],
+      "cover": [
+        "https://p16-sign-sg.tiktokcdn.com/large/tos-alisg-p-0037/8a5ec2f865494efea912b1510d85c5d2.webp?x-expires=1701180000&x-signature=DxX9ijShrVoeUMY5NGm6jZWDL3g%3D&s=FEED&se=false&sh=&sc=cover&l=20231127144015AB5B6805C243061069AE",
+        "https://p16-sign-sg.tiktokcdn.com/large/tos-alisg-p-0037/8a5ec2f865494efea912b1510d85c5d2.jpeg?x-expires=1701180000&x-signature=efU1T80a9VEpo84x0D3K%2FxNKtE8%3D&s=FEED&se=false&sh=&sc=cover&l=20231127144015AB5B6805C243061069AE"
+      ],
+      "dynamicCover": [
+        "https://p16-sign-sg.tiktokcdn.com/tos-alisg-p-0037/0bba02b98b7a4ef7ac73e7f3a6a627b8_1620565626~tplv-dmt-logom:tos-alisg-pv-0037/43c0a33670a64ddaa70f66d785a456ac.image?x-expires=1701180000&x-signature=xqDue%2BBNwTuQ9XZ745RkfV08q70%3D&s=FEED&se=false&sh=&sc=dynamic_cover&l=20231127144015AB5B6805C243061069AE"
+      ],
+      "originCover": [
+        "https://p16-sign-sg.tiktokcdn.com/tos-alisg-p-0037/6fa9fda2024f44b89d22a44fe0182b72_1620565626~tplv-tiktokx-360p.webp?x-expires=1701180000&x-signature=jbcWLaESqHh6pohZJCDLeLxcvFY%3D&s=FEED&se=false&sh=&sc=feed_cover&l=20231127144015AB5B6805C243061069AE",
+        "https://p16-sign-sg.tiktokcdn.com/tos-alisg-p-0037/6fa9fda2024f44b89d22a44fe0182b72_1620565626~tplv-tiktokx-360p.jpeg?x-expires=1701180000&x-signature=ZzJRP4P5eDJu4R5qQTIre2aaDFU%3D&s=FEED&se=false&sh=&sc=feed_cover&l=20231127144015AB5B6805C243061069AE"
+      ],
+      "music": {
+        "id": 6960276375194373000,
+        "title": "original sound - dkaem_",
+        "author": "adinda khalista",
+        "album": "",
+        "playUrl": [
+          "https://sf16-ies-music-sg.tiktokcdn.com/obj/tiktok-obj/6960276318500276994.mp3"
+        ],
+        "coverLarge": [
+          "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/ea0be916fa13146963f23202d5f596d7~c5_1080x1080.webp?x-expires=1701180000&x-signature=vssjm83cfQn6j9WEg97chGkHXjs%3D",
+          "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/ea0be916fa13146963f23202d5f596d7~c5_1080x1080.jpeg?x-expires=1701180000&x-signature=07DQPecDdiu3QNFaInzNg280cpU%3D"
+        ],
+        "coverMedium": [
+          "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/ea0be916fa13146963f23202d5f596d7~c5_720x720.webp?x-expires=1701180000&x-signature=1LwALqt9SG8Ho4csY31PhejvPnE%3D",
+          "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/ea0be916fa13146963f23202d5f596d7~c5_720x720.jpeg?x-expires=1701180000&x-signature=IZO20Pd51sSZGkVi0ykCHzmSSw8%3D"
+        ],
+        "coverThumb": [
+          "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/ea0be916fa13146963f23202d5f596d7~c5_100x100.webp?x-expires=1701180000&x-signature=7mi5kmlZxKhZC%2BfkZ7LV%2FuJPNrQ%3D",
+          "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/ea0be916fa13146963f23202d5f596d7~c5_100x100.jpeg?x-expires=1701180000&x-signature=EEBSkn%2BGn9RUIAj7ia1hPn%2FLQko%3D"
+        ],
+        "duration": 38
+      }
+    }
+  },
+  {
+    "status": "success",
+    "result": {
+      "type": "video",
+      "id": "6960839127994486017",
+      "createTime": 1620696660,
+      "description": "morning vibes✨ @colorboxindonesia #colorboxindonesia  #CBBesties",
+      "hashtag": [
+        "colorboxindonesia",
+        "cbbesties"
+      ],
+      "duration": "0:00",
+      "author": {
+        "uid": "6800342976927106049",
+        "username": "iniayuara",
+        "nickname": "ayusiswariaaa",
+        "signature": "business inq : WA ( +62 815‑2984‑6364 - Anta ) \nhitmeup.ayusiswaria@gmail.com",
+        "region": "ID",
+        "avatarThumb": [
+          "https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/6ba4cb00ed9a28b4a137c259719b7b25~c5_100x100.webp?x-expires=1701180000&x-signature=u9Bb3ScbpTb%2BJxzfuglOfMrqY%2B8%3D",
+          "https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/6ba4cb00ed9a28b4a137c259719b7b25~c5_100x100.jpeg?x-expires=1701180000&x-signature=9UW0a2iC8PM6CRme1QX1Aekc1NQ%3D"
+        ],
+        "avatarMedium": [
+          "https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/6ba4cb00ed9a28b4a137c259719b7b25~c5_720x720.webp?x-expires=1701180000&x-signature=CEsqzJmajzS%2B8OUjrCBbE55BS2c%3D",
+          "https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/6ba4cb00ed9a28b4a137c259719b7b25~c5_720x720.jpeg?x-expires=1701180000&x-signature=KzngU67rz1Kco%2Bq%2BfLxMuL23h68%3D"
+        ],
+        "url": "https://www.tiktok.com/@iniayuara"
+      },
+      "statistics": {
+        "playCount": 66325,
+        "downloadCount": 7,
+        "shareCount": 13,
+        "commentCount": 31,
+        "likeCount": 4211,
+        "favoriteCount": 52,
+        "forwardCount": 0,
+        "whatsappShareCount": 1,
+        "loseCount": 0,
+        "loseCommentCount": 0
+      },
+      "video": [
+        "https://v16.tiktokcdn.com/0ad628c9c0d4729871a79ed454805cb4/6564fed9/video/tos/alisg/tos-alisg-pve-0037/765bb9e6de1b4c9881d01315a362ac6e/?a=1180&ch=0&cr=13&dr=0&lr=all&cd=0%7C0%7C0%7C&cv=1&br=3172&bt=1586&bti=OHYpOTY0Zik7OzlmOm01MzE6ZC4xMDo%3D&cs=0&ds=6&ft=TirtJ1t7vSaQ9EMbgGiG.6C~hXePXmApmZyOx86BJE&mime_type=video_mp4&qs=0&rc=Nzo8ODUzNTo2Nzo2ODY4N0BpanZmbXVvNW13NTMzODgzM0AtLzUuXjU0Xl8xMTIxM2MuYSNkX2FhYnBjcGBgLS1kLzRzcw%3D%3D&l=20231127144016AB5B6805C24306106A6C&btag=e00088000&cc=2",
+        "https://v3.tiktokcdn.com/b96627d4ab3ee972e90ff29179b80e76/6564fed9/video/tos/alisg/tos-alisg-pve-0037/765bb9e6de1b4c9881d01315a362ac6e/?a=1180&ch=0&cr=13&dr=0&lr=all&cd=0%7C0%7C0%7C&cv=1&br=3172&bt=1586&bti=OHYpOTY0Zik7OzlmOm01MzE6ZC4xMDo%3D&cs=0&ds=6&ft=TirtJ1t7vSaQ9EMbgGiG.6C~hXePXmApmZyOx86BJE&mime_type=video_mp4&qs=0&rc=Nzo8ODUzNTo2Nzo2ODY4N0BpanZmbXVvNW13NTMzODgzM0AtLzUuXjU0Xl8xMTIxM2MuYSNkX2FhYnBjcGBgLS1kLzRzcw%3D%3D&l=20231127144016AB5B6805C24306106A6C&btag=e00088000&cc=6",
+        "https://api-h2.tiktokv.com/aweme/v1/play/?video_id=v07025g50000c2ctsjf2slerdjdcbsgg&line=0&is_play_url=1&source=PackSourceEnum_FEED&file_id=14f56345534744b3a77280a215892704&item_id=6960839127994486017&signaturev3=dmlkZW9faWQ7ZmlsZV9pZDtpdGVtX2lkLmZlZmRiOWY5NGY5MDY4YjU2ZWQ5OWQwZmFiZTQxMTk3"
+      ],
+      "cover": [
+        "https://p16-sign-sg.tiktokcdn.com/large/tos-alisg-p-0037/6487d2f73d654f4da0996781b63cdddb_1620696661.webp?x-expires=1701180000&x-signature=kfOgaopHywp6a%2BEb%2BsamCEW81Bw%3D&s=FEED&se=false&sh=&sc=cover&l=20231127144016AB5B6805C24306106A6C",
+        "https://p16-sign-sg.tiktokcdn.com/large/tos-alisg-p-0037/6487d2f73d654f4da0996781b63cdddb_1620696661.jpeg?x-expires=1701180000&x-signature=gTC9dyGGTDn6NjLIDuoSAST7ohE%3D&s=FEED&se=false&sh=&sc=cover&l=20231127144016AB5B6805C24306106A6C"
+      ],
+      "dynamicCover": [
+        "https://p16-sign-sg.tiktokcdn.com/obj/tos-alisg-p-0037/8a10e36e95e54c72b35643b80afa75cb_1620696661?x-expires=1701180000&x-signature=LYLh4HkvHnjUqoI4IURgio14rvY%3D&s=FEED&se=false&sh=&sc=dynamic_cover&l=20231127144016AB5B6805C24306106A6C"
+      ],
+      "originCover": [
+        "https://p16-sign-sg.tiktokcdn.com/tos-alisg-p-0037/a318aa8f38bc465abd9c825d74fc5a67_1620696661~tplv-tiktokx-360p.webp?x-expires=1701180000&x-signature=PCro%2BFi94T4i66CQjMs7uA4hJ5c%3D&s=FEED&se=false&sh=&sc=feed_cover&l=20231127144016AB5B6805C24306106A6C",
+        "https://p16-sign-sg.tiktokcdn.com/tos-alisg-p-0037/a318aa8f38bc465abd9c825d74fc5a67_1620696661~tplv-tiktokx-360p.jpeg?x-expires=1701180000&x-signature=txQE3dSKiqNbh15NANiq%2B9Zkv7Q%3D&s=FEED&se=false&sh=&sc=feed_cover&l=20231127144016AB5B6805C24306106A6C"
+      ],
+      "music": {
+        "id": 6826004458942631000,
+        "title": "original sound - carolinegregory",
+        "author": "caroline",
+        "album": "",
+        "playUrl": [
+          "https://sf16-ies-music-va.tiktokcdn.com/obj/musically-maliva-obj/2bb8da03fed736fd55909475a2edc928.mp3"
+        ],
+        "coverLarge": [
+          "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/01b47ac783a7b422a8177def62c93221~c5_1080x1080.webp?x-expires=1701180000&x-signature=ocdr6gVWMCaL8n69wVKIlAMng2o%3D",
+          "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/01b47ac783a7b422a8177def62c93221~c5_1080x1080.jpeg?x-expires=1701180000&x-signature=3tPlHQgT9Hy7c2fOPlW6JCMNknM%3D"
+        ],
+        "coverMedium": [
+          "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/01b47ac783a7b422a8177def62c93221~c5_720x720.webp?x-expires=1701180000&x-signature=7JFqO82b0KAaVdZL7u9qFJUyo4g%3D",
+          "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/01b47ac783a7b422a8177def62c93221~c5_720x720.jpeg?x-expires=1701180000&x-signature=lnFSCJsf8DzC4lVl68jzx%2FN7vL8%3D"
+        ],
+        "coverThumb": [
+          "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/01b47ac783a7b422a8177def62c93221~c5_100x100.webp?x-expires=1701180000&x-signature=PwyYE6nLU1QsW%2FA6a8qsll8g6Bg%3D",
+          "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/01b47ac783a7b422a8177def62c93221~c5_100x100.jpeg?x-expires=1701180000&x-signature=nqnh0Z9R9TRK7%2FuIgu50wmA9EsY%3D"
+        ],
+        "duration": 38
+      }
+    }
+  },
+  {
+    "status": "success",
+    "result": {
+      "type": "video",
+      "id": "6939090363063799041",
+      "createTime": 1615632878,
+      "description": "Which one is your fav look? Buat yang penasaran beli dimana ntn smpe akhir yaa!👀 @colorboxindonesia #colorboxindonesia #CBBesties",
+      "hashtag": [
+        "colorboxindonesia",
+        "cbbesties"
+      ],
+      "duration": "0:00",
+      "author": {
+        "uid": "6780763663214150658",
+        "username": "tekinziee",
+        "nickname": "ig : @tekinziee",
+        "signature": "gue aktif di instagram juga loh @tekinziee!🤍\nbelinya dimana? disini yaaa👇🏻",
+        "region": "ID",
+        "avatarThumb": [
+          "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/fa0b8d13fab965c49ec770606a9590bf~c5_100x100.webp?x-expires=1701180000&x-signature=IamGhLIFgHipoovhWeXld4XM1mM%3D",
+          "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/fa0b8d13fab965c49ec770606a9590bf~c5_100x100.jpeg?x-expires=1701180000&x-signature=qxZALMqI9tljhIYRV1q%2Bn5wcDqI%3D"
+        ],
+        "avatarMedium": [
+          "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/fa0b8d13fab965c49ec770606a9590bf~c5_720x720.webp?x-expires=1701180000&x-signature=TpBsfJ6voGxUx9xdqlLYFIQZi3M%3D",
+          "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/fa0b8d13fab965c49ec770606a9590bf~c5_720x720.jpeg?x-expires=1701180000&x-signature=djYOl90VVmWai%2F197ak4unr%2BAHE%3D"
+        ],
+        "url": "https://www.tiktok.com/@tekinziee"
+      },
+      "statistics": {
+        "playCount": 72574,
+        "downloadCount": 18,
+        "shareCount": 10,
+        "commentCount": 24,
+        "likeCount": 4098,
+        "favoriteCount": 81,
+        "forwardCount": 0,
+        "whatsappShareCount": 0,
+        "loseCount": 0,
+        "loseCommentCount": 0
+      },
+      "video": [
+        "https://v3.tiktokcdn.com/4c8e3a59518d2bd7a5ea6a9d4596b3e6/6564fec4/video/tos/alisg/tos-alisg-pve-0037/a11de7cd3fc6493dad03ebe5d9db144e/?a=1180&ch=0&cr=13&dr=0&lr=all&cd=0%7C0%7C0%7C&cv=1&br=2060&bt=1030&bti=OHYpOTY0Zik7OzlmOm01MzE6ZC4xMDo%3D&cs=0&ds=6&ft=TirtJ1t7vSaQ9EMbgGiG.6C~QXePXmApmZyOx86BJE&mime_type=video_mp4&qs=0&rc=ZGRlOmZmZWhpZTo3Z2RlaEBpM2V0eXVoPHM8NDMzaDgzM0BhMDUzMzMtNV8xNTEwLzItYSM2Zi8zaW0uZzNgLS1fLzRzcw%3D%3D&l=20231127144019AB5B6805C24306106B6D&btag=e00088000&cc=6",
+        "https://v16.tiktokcdn.com/75840f0da75e9cc4d1f471e8f406a0ef/6564fec4/video/tos/alisg/tos-alisg-pve-0037/a11de7cd3fc6493dad03ebe5d9db144e/?a=1180&ch=0&cr=13&dr=0&lr=all&cd=0%7C0%7C0%7C&cv=1&br=2060&bt=1030&bti=OHYpOTY0Zik7OzlmOm01MzE6ZC4xMDo%3D&cs=0&ds=6&ft=TirtJ1t7vSaQ9EMbgGiG.6C~QXePXmApmZyOx86BJE&mime_type=video_mp4&qs=0&rc=ZGRlOmZmZWhpZTo3Z2RlaEBpM2V0eXVoPHM8NDMzaDgzM0BhMDUzMzMtNV8xNTEwLzItYSM2Zi8zaW0uZzNgLS1fLzRzcw%3D%3D&l=20231127144019AB5B6805C24306106B6D&btag=e00088000&cc=2",
+        "https://api-h2.tiktokv.com/aweme/v1/play/?video_id=v07025be0000c169jp19pelr6v2qib90&line=0&is_play_url=1&source=PackSourceEnum_FEED&file_id=0e5b2a3d44874bbf8e0b6c6c678b3ada&item_id=6939090363063799041&signaturev3=dmlkZW9faWQ7ZmlsZV9pZDtpdGVtX2lkLjZkNzFkOTE2Zjk4ZWNlOTNmZTY1MDIyMDRlYTg5Yzc5"
+      ],
+      "cover": [
+        "https://p16-sign-sg.tiktokcdn.com/large/tos-alisg-p-0037/752c89a3c86e4549a303d98955f4a158.webp?x-expires=1701180000&x-signature=DBcQOXLdAk28Hlq51JHHxG3W0eg%3D&s=FEED&se=false&sh=&sc=cover&l=20231127144019AB5B6805C24306106B6D",
+        "https://p16-sign-sg.tiktokcdn.com/large/tos-alisg-p-0037/752c89a3c86e4549a303d98955f4a158.jpeg?x-expires=1701180000&x-signature=gCr0jIDPcBMWnPCcWbu5%2Bh3Dng0%3D&s=FEED&se=false&sh=&sc=cover&l=20231127144019AB5B6805C24306106B6D"
+      ],
+      "dynamicCover": [
+        "https://p16-sign-sg.tiktokcdn.com/obj/tos-alisg-p-0037/80cca3e0fc9f4208841dbe36e8b2889d_1615632880?x-expires=1701180000&x-signature=10fsGNe%2FMuvmH3IdsTf5wA8sfQw%3D&s=FEED&se=false&sh=&sc=dynamic_cover&l=20231127144019AB5B6805C24306106B6D"
+      ],
+      "originCover": [
+        "https://p16-sign-sg.tiktokcdn.com/tos-alisg-p-0037/e46336a0de894a9b85e429c05c5fe64e_1615632880~tplv-tiktokx-360p.webp?x-expires=1701180000&x-signature=58%2FaP80%2FJ9O7j6zLgFytYOhS7wM%3D&s=FEED&se=false&sh=&sc=feed_cover&l=20231127144019AB5B6805C24306106B6D",
+        "https://p16-sign-sg.tiktokcdn.com/tos-alisg-p-0037/e46336a0de894a9b85e429c05c5fe64e_1615632880~tplv-tiktokx-360p.jpeg?x-expires=1701180000&x-signature=JYfkZu9%2BvfkaAY5FMjsZi%2FaiBGc%3D&s=FEED&se=false&sh=&sc=feed_cover&l=20231127144019AB5B6805C24306106B6D"
+      ],
+      "music": {
+        "id": 6868510872034594000,
+        "title": "best friend",
+        "author": "chillytunees",
+        "album": "",
+        "playUrl": [
+          "https://sf16-ies-music-sg.tiktokcdn.com/obj/tiktok-obj/6868510768254421762.mp3"
+        ],
+        "coverLarge": [
+          "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/c579abf38ad99366ebfc86e941e7a4f4~c5_1080x1080.webp?x-expires=1701180000&x-signature=gwZWG5c2WsRB4WuFWoqn5w9RZRU%3D",
+          "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/c579abf38ad99366ebfc86e941e7a4f4~c5_1080x1080.jpeg?x-expires=1701180000&x-signature=vFUuxiUH05UfqAxj9T%2FuJn8Nx6k%3D"
+        ],
+        "coverMedium": [
+          "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/c579abf38ad99366ebfc86e941e7a4f4~c5_720x720.webp?x-expires=1701180000&x-signature=u8kuPUUnDSMyo7pXqEbrBknSclc%3D",
+          "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/c579abf38ad99366ebfc86e941e7a4f4~c5_720x720.jpeg?x-expires=1701180000&x-signature=0y2iY6btSIwgreZsjRz1hmrS4Co%3D"
+        ],
+        "coverThumb": [
+          "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/c579abf38ad99366ebfc86e941e7a4f4~c5_100x100.webp?x-expires=1701180000&x-signature=kgwQHVJ6QX84Hq3CBbA94LA%2Bb7E%3D",
+          "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/c579abf38ad99366ebfc86e941e7a4f4~c5_100x100.jpeg?x-expires=1701180000&x-signature=CBGK2B5bQK1k%2Fw7i949iIRgv9x4%3D"
+        ],
+        "duration": 37
+      }
+    }
+  },
+  {
+    "status": "success",
+    "result": {
+      "type": "video",
+      "id": "7302408276166135058",
+      "createTime": 1700224423,
+      "description": "#colorbox #CBbesties ",
+      "hashtag": [
+        "colorbox",
+        "CBbesties"
+      ],
+      "duration": "0:00",
+      "author": {
+        "uid": "6630991167466176514",
+        "username": "phanuyennhi13092001",
+        "nickname": "Phan Uyên Nhi 🤍",
+        "signature": "Fb: Phan Uyên Nhi",
+        "region": "VN",
+        "avatarThumb": [
+          "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/5f12a6416d8075d02b7a3cec4679ff3b~c5_100x100.webp?x-expires=1701180000&x-signature=lweg9%2F6NNNiFOhrOOWRPVeyzLTo%3D",
+          "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/5f12a6416d8075d02b7a3cec4679ff3b~c5_100x100.jpeg?x-expires=1701180000&x-signature=lGawmNlMxOfwst%2Fw4BYRact07K4%3D"
+        ],
+        "avatarMedium": [
+          "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/5f12a6416d8075d02b7a3cec4679ff3b~c5_720x720.webp?x-expires=1701180000&x-signature=FE8hG9MvO0aTlEuUJnqZVclVWrg%3D",
+          "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/5f12a6416d8075d02b7a3cec4679ff3b~c5_720x720.jpeg?x-expires=1701180000&x-signature=LtA%2F6T6nx7k9JGxILZ1UxVmCeQs%3D"
+        ],
+        "url": "https://www.tiktok.com/@phanuyennhi13092001"
+      },
+      "statistics": {
+        "playCount": 35859,
+        "downloadCount": 25,
+        "shareCount": 6,
+        "commentCount": 33,
+        "likeCount": 3913,
+        "favoriteCount": 90,
+        "forwardCount": 0,
+        "whatsappShareCount": 0,
+        "loseCount": 0,
+        "loseCommentCount": 0
+      },
+      "video": [
+        "https://v53.tiktokcdn.com/7c9db99136170ec5239df359e7446f68/6564feda/video/tos/alisg/tos-alisg-pve-0037c001/oAXE8EJDgOHBL01FfylRBQAeI5XHbVEo1NrxiQ/?a=1180&ch=0&cr=13&dr=0&lr=all&cd=0%7C0%7C0%7C&cv=1&br=3600&bt=1800&bti=Ozk3QGo4dik7OzlmMzAuYCM6bS4xMDo%3D&cs=0&ds=6&ft=TirtJ1t7vSaQ9EMbgGiG.6C~tXePXmApmZyOx86BJE&mime_type=video_mp4&qs=0&rc=Zmg2Z2Y8aWY0MzxpZWVnZEBpamhpa3g5cjZvbzMzODczNEAzLl5gNWI1XjYxYl9hMjFgYSMxXm1wMmRjbl9gLS1kMS1zcw%3D%3D&l=20231127144021AB5B6805C24306106C55&btag=e00088000&cc=17",
+        "https://v3.tiktokcdn.com/20b2002b6b5d3d1ccb7bb05941d885e7/6564feda/video/tos/alisg/tos-alisg-pve-0037c001/oAXE8EJDgOHBL01FfylRBQAeI5XHbVEo1NrxiQ/?a=1180&ch=0&cr=13&dr=0&lr=all&cd=0%7C0%7C0%7C&cv=1&br=3600&bt=1800&bti=Ozk3QGo4dik7OzlmMzAuYCM6bS4xMDo%3D&cs=0&ds=6&ft=TirtJ1t7vSaQ9EMbgGiG.6C~tXePXmApmZyOx86BJE&mime_type=video_mp4&qs=0&rc=Zmg2Z2Y8aWY0MzxpZWVnZEBpamhpa3g5cjZvbzMzODczNEAzLl5gNWI1XjYxYl9hMjFgYSMxXm1wMmRjbl9gLS1kMS1zcw%3D%3D&l=20231127144021AB5B6805C24306106C55&btag=e00088000&cc=6",
+        "https://api-h2.tiktokv.com/aweme/v1/play/?video_id=v10044g50000clblq3fog65ushpfae4g&line=0&is_play_url=1&source=PackSourceEnum_FEED&file_id=ca4d5bdbbfe94091ac8fe98ccda31e6c&item_id=7302408276166135058&signaturev3=dmlkZW9faWQ7ZmlsZV9pZDtpdGVtX2lkLjg0MGZhOWJjNTRhZDQ1MmJmM2Q2OGI1MDBiMGM3YTcw"
+      ],
+      "cover": [
+        "https://p16-sign-sg.tiktokcdn.com/large/tos-alisg-p-0037/c6095c0242a04416892ef64cb741d480_1700224426.webp?x-expires=1701180000&x-signature=7T9tuJYJ%2FIsNQZbRh646jpJOQ6k%3D&s=FEED&se=false&sh=&sc=cover&l=20231127144021AB5B6805C24306106C55",
+        "https://p16-sign-sg.tiktokcdn.com/large/tos-alisg-p-0037/c6095c0242a04416892ef64cb741d480_1700224426.jpeg?x-expires=1701180000&x-signature=V3wHuwbJ7GJSetR2TJ4AnAt7dmY%3D&s=FEED&se=false&sh=&sc=cover&l=20231127144021AB5B6805C24306106C55"
+      ],
+      "dynamicCover": [
+        "https://p16-sign-sg.tiktokcdn.com/obj/tos-alisg-p-0037/dd9301583c00419aafe6695bcd68a410_1700224427?x-expires=1701180000&x-signature=klscWS%2B9pG70kd0zQptAC166wP0%3D&s=FEED&se=false&sh=&sc=dynamic_cover&l=20231127144021AB5B6805C24306106C55"
+      ],
+      "originCover": [
+        "https://p16-sign-sg.tiktokcdn.com/tos-alisg-p-0037/008ef37b453a4cf995bd70be32e1c92b_1700224426~tplv-tiktokx-360p.webp?x-expires=1701180000&x-signature=ut2D9AAf%2FGx544%2FJUGD4XfdOPAc%3D&s=FEED&se=false&sh=&sc=feed_cover&l=20231127144021AB5B6805C24306106C55",
+        "https://p16-sign-sg.tiktokcdn.com/tos-alisg-p-0037/008ef37b453a4cf995bd70be32e1c92b_1700224426~tplv-tiktokx-360p.jpeg?x-expires=1701180000&x-signature=NvjsDFswAQ7PeL3O%2FNaqksjTYc4%3D&s=FEED&se=false&sh=&sc=feed_cover&l=20231127144021AB5B6805C24306106C55"
+      ],
+      "music": {
+        "id": 7262665914749849000,
+        "title": "original sound - culuan29071999",
+        "author": "☘️1999🎧",
+        "album": "",
+        "playUrl": [
+          "https://sf16-ies-music-sg.tiktokcdn.com/obj/tiktok-obj/7262665903148714753.mp3"
+        ],
+        "coverLarge": [
+          "https://p16-sign-sg.tiktokcdn.com/aweme/1080x1080/tos-alisg-avt-0068/a56be1100117c38843afe749046a0bf7.webp?x-expires=1701180000&x-signature=JR%2FfADBjDGYGRfWACqa9k%2BulqmQ%3D",
+          "https://p16-sign-sg.tiktokcdn.com/aweme/1080x1080/tos-alisg-avt-0068/a56be1100117c38843afe749046a0bf7.jpeg?x-expires=1701180000&x-signature=kPS2W2R8E0fNLkzmFz8pEHVwMzQ%3D"
+        ],
+        "coverMedium": [
+          "https://p16-sign-sg.tiktokcdn.com/aweme/720x720/tos-alisg-avt-0068/a56be1100117c38843afe749046a0bf7.webp?x-expires=1701180000&x-signature=wtVl7%2Bk8dzlU%2FaGX25BOFjL%2FXXE%3D",
+          "https://p16-sign-sg.tiktokcdn.com/aweme/720x720/tos-alisg-avt-0068/a56be1100117c38843afe749046a0bf7.jpeg?x-expires=1701180000&x-signature=3e3tVOmYrcIZejIzKr1%2FBUP0qKE%3D"
+        ],
+        "coverThumb": [
+          "https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/a56be1100117c38843afe749046a0bf7.webp?x-expires=1701180000&x-signature=WOlxgvx4xwb8de3MY3JZz1Mh4Y0%3D",
+          "https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/a56be1100117c38843afe749046a0bf7.jpeg?x-expires=1701180000&x-signature=R1n1eHXyET6EE9pQ3eeuz40xJPQ%3D"
+        ],
+        "duration": 119
+      }
+    }
+  },
+  {
+    "status": "success",
+    "result": {
+      "type": "video",
+      "id": "6941180124440153346",
+      "createTime": 1616119443,
+      "description": "pilihin dong yang mana? 🥺 @colorboxindonesia #colorboxindonesia #CBBesties",
+      "hashtag": [
+        "colorboxindonesia",
+        "cbbesties"
+      ],
+      "duration": "0:00",
+      "author": {
+        "uid": "6676392335226700801",
+        "username": "ngelskk",
+        "nickname": "angel🦋",
+        "signature": "ig : ngelskk",
+        "region": "ID",
+        "avatarThumb": [
+          "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/608016091aed9a8a42f56473926db427~c5_100x100.webp?x-expires=1701180000&x-signature=mn2JujAU9nhAr1RPp%2Fjo4RqEnzI%3D",
+          "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/608016091aed9a8a42f56473926db427~c5_100x100.jpeg?x-expires=1701180000&x-signature=HMnSvD3ZKATCYsOb%2BEI5YXbwKs4%3D"
+        ],
+        "avatarMedium": [
+          "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/608016091aed9a8a42f56473926db427~c5_720x720.webp?x-expires=1701180000&x-signature=98Ot6Jw%2Bh26KuSUKtlZ0LULhEeA%3D",
+          "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/608016091aed9a8a42f56473926db427~c5_720x720.jpeg?x-expires=1701180000&x-signature=TSlKoXrwM0YFEcRT2Cu2bloPdLQ%3D"
+        ],
+        "url": "https://www.tiktok.com/@ngelskk"
+      },
+      "statistics": {
+        "playCount": 56660,
+        "downloadCount": 44,
+        "shareCount": 17,
+        "commentCount": 99,
+        "likeCount": 3691,
+        "favoriteCount": 53,
+        "forwardCount": 0,
+        "whatsappShareCount": 3,
+        "loseCount": 0,
+        "loseCommentCount": 0
+      },
+      "video": [
+        "https://v16.tiktokcdn.com/925e577b444f3c28edb73f37e9c247ce/6564fed8/video/tos/alisg/tos-alisg-pve-0037/113dd19a77344dd3a0dc148a9f74a9f1/?a=1180&ch=0&cr=13&dr=0&lr=all&cd=0%7C0%7C0%7C&cv=1&br=2024&bt=1012&bti=OHYpOTY0Zik7OzlmOm01MzE6ZC4xMDo%3D&cs=0&ds=6&ft=TirtJ1t7vSaQ9EMbgGiG.6C~gXePXmApmZyOx86BJE&mime_type=video_mp4&qs=0&rc=Zzc4ODw3O2kzZzU8NzY8ZEBpM242OjppcHgzNDMzODgzM0A0MDRhNWAuXjIxX15jNGJiYSM1a2JeMm9yYF5gLS0zLzRzcw%3D%3D&l=20231127144023AB5B6805C24306106D22&btag=e00088000&cc=2",
+        "https://v9-id.tiktokcdn.com/b9b0edfd4846e93e12d44663c4f50e08/6564fed8/video/tos/alisg/tos-alisg-pve-0037/113dd19a77344dd3a0dc148a9f74a9f1/?a=1180&ch=0&cr=13&dr=0&lr=all&cd=0%7C0%7C0%7C&cv=1&br=2024&bt=1012&bti=OHYpOTY0Zik7OzlmOm01MzE6ZC4xMDo%3D&cs=0&ds=6&ft=TirtJ1t7vSaQ9EMbgGiG.6C~gXePXmApmZyOx86BJE&mime_type=video_mp4&qs=0&rc=Zzc4ODw3O2kzZzU8NzY8ZEBpM242OjppcHgzNDMzODgzM0A0MDRhNWAuXjIxX15jNGJiYSM1a2JeMm9yYF5gLS0zLzRzcw%3D%3D&l=20231127144023AB5B6805C24306106D22&btag=e00088000&cc=1c",
+        "https://api-h2.tiktokv.com/aweme/v1/play/?video_id=v07025650000c1a0cuumrf57a7e3nk80&line=0&is_play_url=1&source=PackSourceEnum_FEED&file_id=eae973f4a9b24d50af18c489d575347d&item_id=6941180124440153346&signaturev3=dmlkZW9faWQ7ZmlsZV9pZDtpdGVtX2lkLjQwZTY3OWViZjk3MjgzMDY2NmZjNDJiYWM1M2QwMDMy"
+      ],
+      "cover": [
+        "https://p16-sign-sg.tiktokcdn.com/large/tos-alisg-p-0037/902c9171658a47bd9e647efccf27154f.webp?x-expires=1701180000&x-signature=TcqeUFwwPJ2ts9FcU524IdVDgf8%3D&s=FEED&se=false&sh=&sc=cover&l=20231127144023AB5B6805C24306106D22",
+        "https://p16-sign-sg.tiktokcdn.com/large/tos-alisg-p-0037/902c9171658a47bd9e647efccf27154f.jpeg?x-expires=1701180000&x-signature=qvoDmLFXal5orRSsegiREfeg3bg%3D&s=FEED&se=false&sh=&sc=cover&l=20231127144023AB5B6805C24306106D22"
+      ],
+      "dynamicCover": [
+        "https://p16-sign-sg.tiktokcdn.com/obj/tos-alisg-p-0037/e923309cd5974cdcab06d314fd5fb6f9_1616119445?x-expires=1701180000&x-signature=hsReCyzTmSMEde8bdKF20RgYKjA%3D&s=FEED&se=false&sh=&sc=dynamic_cover&l=20231127144023AB5B6805C24306106D22"
+      ],
+      "originCover": [
+        "https://p16-sign-sg.tiktokcdn.com/tos-alisg-p-0037/ad6c5a5b3ccf4c739617a9c1c14f76d7_1616119444~tplv-tiktokx-360p.webp?x-expires=1701180000&x-signature=I4mV4ZfwfssOmoBtewGvk5s3CzY%3D&s=FEED&se=false&sh=&sc=feed_cover&l=20231127144023AB5B6805C24306106D22",
+        "https://p16-sign-sg.tiktokcdn.com/tos-alisg-p-0037/ad6c5a5b3ccf4c739617a9c1c14f76d7_1616119444~tplv-tiktokx-360p.jpeg?x-expires=1701180000&x-signature=Bh49bYfY%2Bzjy8PYYtQcG8%2Fg8%2FZs%3D&s=FEED&se=false&sh=&sc=feed_cover&l=20231127144023AB5B6805C24306106D22"
+      ],
+      "music": {
+        "id": 6709402759789038000,
+        "title": "To the Bone",
+        "author": "Pamungkas",
+        "album": "Flying Solo",
+        "playUrl": [
+          "https://sf16-ies-music-sg.tiktokcdn.com/obj/tos-alisg-ve-2774/o84OePlwnYbEO5BhFHedgYzGqCbRIqDQDUASaf"
+        ],
+        "coverLarge": [
+          "https://p16-sg.tiktokcdn.com/aweme/720x720/tos-alisg-v-2774/e9e0d1c5fa5e4de086f761e81ef66459.jpeg"
+        ],
+        "coverMedium": [
+          "https://p16-sg.tiktokcdn.com/aweme/200x200/tos-alisg-v-2774/e9e0d1c5fa5e4de086f761e81ef66459.jpeg"
+        ],
+        "coverThumb": [
+          "https://p16-sg.tiktokcdn.com/aweme/100x100/tos-alisg-v-2774/e9e0d1c5fa5e4de086f761e81ef66459.jpeg"
+        ],
+        "duration": 60
+      }
+    }
+  }
+]
