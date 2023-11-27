@@ -446,10 +446,12 @@ def get_influencer_latest():
     #     print(f"Latest data for {document['username']}: {document}")
 
 def job():
-    print("Hello, this is my scheduled job!")
+    print("sync influencers")
+    sync_influencer()
+    
 
 scheduler = BackgroundScheduler()
-scheduler.add_job(job, trigger="cron", hour=14, minute=56)
+scheduler.add_job(job, trigger="cron", hour=2, minute=00)
 scheduler.start()
 
 if __name__ == '__main__':
