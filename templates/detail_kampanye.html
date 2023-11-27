@@ -4,10 +4,10 @@
   <div class="content-wrapper">
     <div class="page-header">
       <h3 class="page-title">
-        <span class="page-title-icon bg-gradient-primary text-white mr-2">
-          <i class="mdi mdi-home"></i>                 
-        </span>
-          {{ campaign.namaCampaign }}
+        <a href="/kampanye" class="page-title-icon bg-gradient-primary text-white mr-2">
+            <i class="mdi mdi-arrow-left-bold"></i>
+        </a>
+        {{ campaign.namaCampaign }}
       </h3>
       <nav aria-label="breadcrumb">
         <ul class="breadcrumb">
@@ -35,14 +35,25 @@
           {{ render_add_post_modal(campaign) }}
       </div>
     </div>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="alert alert-danger">
+          {% for category, message in messages %}
+            {{ message }}
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
     <div class="row">
       <div class="col-12 grid-margin">
         <div class="card">
           <div class="card-body">
             <!-- <h4 class="card-title">Kampanye</h4> -->
-            <h6 class="mb-4">Latest Retrieve: 19 Oktober 2023 <button type="button" class="btn btn-sm btn-gradient-info btn-rounded ml-4">Sync now</button></h6>
+            <h6 class="mb-4">Latest Retrieve: {{formatted_date}}
+              <a href="{{ url_for('sync_video_route', campaign_id=campaign._id) }}" type="button" class="btn btn-sm btn-gradient-info btn-rounded ml-4">Sync now</a>
+            </h6>
             <div class="table-responsive">
-              <table class="table text-center">
+              <table id="campaignDetail" class="table text-center">
                 <thead>
                   <tr>
                     <th>No.</th>
@@ -62,11 +73,11 @@
                       <td>{{ loop.index }}</td>
                       <td><a href="{{ video.video_url }}" target="_blank">Link</a></td>
                       <td>{{ video.username }}</td>
-                      <td>{{ video.likeCount }}</td>
-                      <td>{{ video.playCount }}</td>
-                      <td>{{ video.commentCount }}</td>
-                      <td>{{ video.shareCount }}</td>
-                      <td>{{ video.engagementRate }}</td>
+                      <td>{{ video.likeCount | format_number }}</td>
+                      <td>{{ video.playCount | format_number }}</td>
+                      <td>{{ video.commentCount | format_number }}</td>
+                      <td>{{ video.shareCount | format_number }}</td>
+                      <td>{{ video.engagementRate | format_percentage }}</td>
                       <td>
                           <button type="button" class="btn btn-sm btn-gradient-info" data-toggle="modal" data-target="#editVideo{{ loop.index }}">
                               <i class="mdi mdi-pencil"></i>
@@ -90,4 +101,10 @@
       </div>
     </div>
   </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      let table = new DataTable('#campaignDetail',);
+    });
+  </script>
 {% endblock %}
