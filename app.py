@@ -406,6 +406,8 @@ def edit_video():
                 {'$set': {'video.$.video_url': edited_video_url}}
             )
             # Redirect to the page displaying the campaigns
+            sync_video_route()
+
             return redirect(url_for('detail_kampanye', campaign_id=campaign_id))
         except Exception as e:
             print(f"Error editing campaign: {e}")

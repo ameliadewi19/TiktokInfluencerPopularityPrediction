@@ -1,7 +1,104 @@
 [
     {
-        "idCampaign": 2,
-        "namaCampaign": "Jiniso Emang Keren",
-        "video": []
+        "idCampaign": 3,
+        "namaCampaign": "Colorbox Besties",
+        "video": [
+            {
+                "id": "6939495914104966401",
+                "description": "All Outfit\u2019s is from : @colorboxindonesia #colorboxindonesia #CBBesties #fyp",
+                "username": "thsaurus",
+                "playCount": 328179,
+                "commentCount": 143,
+                "shareCount": 358,
+                "likeCount": 37511,
+                "engagementRate": 0.11582703341773849,
+                "video_url": "https://www.tiktok.com/@cineed/video/7036299349776747802",
+                "dateRetrieve": "2023-11-27 21:40:26"
+            },
+            {
+                "id": "6942057868904369410",
+                "description": "Kalian paling suka yang mana?\ud83d\udc97\u2728 @colorboxindonesia #colorboxindonesia #CBBesties",
+                "username": "angelinesentosa",
+                "playCount": 1414887,
+                "commentCount": 371,
+                "shareCount": 89,
+                "likeCount": 29392,
+                "engagementRate": 0.02109850468623996,
+                "video_url": "https://www.tiktok.com/@thsaurus/video/6939495914104966401?is_from_webapp=1&sender_device=pc&web_id=7300156913415980546",
+                "dateRetrieve": "2023-11-27 21:40:26"
+            },
+            {
+                "id": "6954997314343816450",
+                "description": "pls help meeee harus bikin surprise yang kaya gimana\ud83e\udd7a @colorboxindonesia #colorboxindonesia #cbbesties",
+                "username": "bee.lla",
+                "playCount": 155726,
+                "commentCount": 50,
+                "shareCount": 16,
+                "likeCount": 13811,
+                "engagementRate": 0.08911164481204166,
+                "video_url": "https://www.tiktok.com/@angelinesentosa/video/6942057868904369410?is_from_webapp=1&sender_device=pc&web_id=7300156913415980546",
+                "dateRetrieve": "2023-11-27 21:40:26"
+            },
+            {
+                "id": "6960276342541667585",
+                "description": "another styling tips with @colorboxindonesia ! #colorboxindonesia #CBBesties",
+                "username": "dkaem_",
+                "playCount": 98388,
+                "commentCount": 27,
+                "shareCount": 37,
+                "likeCount": 4756,
+                "engagementRate": 0.04898971419278774,
+                "video_url": "https://www.tiktok.com/@bee.lla/video/6954997314343816450?is_from_webapp=1&sender_device=pc&web_id=7300156913415980546",
+                "dateRetrieve": "2023-11-27 21:40:26"
+            },
+            {
+                "id": "6960839127994486017",
+                "description": "morning vibes\u2728 @colorboxindonesia #colorboxindonesia  #CBBesties",
+                "username": "iniayuara",
+                "playCount": 66325,
+                "commentCount": 31,
+                "shareCount": 13,
+                "likeCount": 4211,
+                "engagementRate": 0.06415378816434225,
+                "video_url": "https://www.tiktok.com/@dkaem_/video/6960276342541667585?is_from_webapp=1&sender_device=pc&web_id=7300156913415980546",
+                "dateRetrieve": "2023-11-27 21:40:26"
+            },
+            {
+                "id": "6939090363063799041",
+                "description": "Which one is your fav look? Buat yang penasaran beli dimana ntn smpe akhir yaa!\ud83d\udc40 @colorboxindonesia #colorboxindonesia #CBBesties",
+                "username": "tekinziee",
+                "playCount": 72574,
+                "commentCount": 24,
+                "shareCount": 10,
+                "likeCount": 4098,
+                "engagementRate": 0.05693499049246287,
+                "video_url": "https://www.tiktok.com/@iniayuara/video/6960839127994486017?is_from_webapp=1&sender_device=pc&web_id=7300156913415980546",
+                "dateRetrieve": "2023-11-27 21:40:26"
+            },
+            {
+                "id": "7302408276166135058",
+                "description": "#colorbox #CBbesties ",
+                "username": "phanuyennhi13092001",
+                "playCount": 35859,
+                "commentCount": 33,
+                "shareCount": 6,
+                "likeCount": 3913,
+                "engagementRate": 0.1102094313840319,
+                "video_url": "https://www.tiktok.com/@tekinziee/video/6939090363063799041?is_from_webapp=1&sender_device=pc&web_id=7300156913415980546",
+                "dateRetrieve": "2023-11-27 21:40:26"
+            },
+            {
+                "id": "6941180124440153346",
+                "description": "pilihin dong yang mana? \ud83e\udd7a @colorboxindonesia #colorboxindonesia #CBBesties",
+                "username": "ngelskk",
+                "playCount": 56660,
+                "commentCount": 99,
+                "shareCount": 17,
+                "likeCount": 3691,
+                "engagementRate": 0.06719025767737381,
+                "video_url": "https://www.tiktok.com/@phanuyennhi13092001/video/7302408276166135058?is_from_webapp=1&sender_device=pc&web_id=7300156913415980546",
+                "dateRetrieve": "2023-11-27 21:40:26"
+            }
+        ]
     }
 ]
